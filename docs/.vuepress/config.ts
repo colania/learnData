@@ -10,7 +10,7 @@ export default defineUserConfig({
   // 网站语言，默认为中文
   lang: "zh-CN",
   // 网站标题
-  title: "test",
+  title: "田野放空",
   // 网站描述
   description:
     "探索、经历、思考、归纳、自我提升，记录并输出一切能让自己提升的知识。",
@@ -37,10 +37,10 @@ export default defineUserConfig({
 
   plugins: [
     // 谷歌分析
-    googleAnalyticsPlugin({
-      // 需要设置自己的 ID
-      id: "G-RWKZTY2P9R",
-    }),
+    // googleAnalyticsPlugin({
+    //   // 需要设置自己的 ID
+    //   id: "G-RWKZTY2P9R",
+    // }),
 
     // Algolia 全文搜索：需要自己设置爬虫并生成下方配置，如不会自己设置，启用下方本地搜索
     // docsearchPlugin({
