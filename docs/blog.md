@@ -3,11 +3,11 @@
 home: true
 layout: BlogHome
 icon: home
-title: 互联网小白
+title: 田野放空
 #heroImage: /logo.svg
-heroText: 互联网小白
+heroText: 田野放空
 tagline: 盛年不重来，一日难再晨
-bgImage: https://img.newzone.top/home-bg-1.jpg
+bgImage: https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/IMG_1543.JPG
 heroFullScreen: false
 #projects:
 #  - icon: project

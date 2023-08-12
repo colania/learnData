@@ -66,7 +66,7 @@ export default hopeTheme({
   blog: {
     articleInfo: ["Date", "PageView", "Category", "Tag", "ReadingTime"],
     name: "田野",
-    avatar: "/avatar_self.webp",
+    avatar: "https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/%E6%9C%AA%E5%91%BD%E5%90%8D%E4%BD%9C%E5%93%81.JPG",
     description: "金融真是个迷人的东西",
     intro: "/intro.html",
     roundAvatar: true,
