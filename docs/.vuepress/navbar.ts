@@ -8,14 +8,17 @@ export default navbar([
     icon: "code",
     prefix: "/",
     children: [
-      "code/Markdown",
-      "code/AutoHotkey",
-      "code/Electron",
+      //"code/Markdown",
       {
-        text: "页面开发",
+        text: "工作经验",
+        prefix: "",
+
+      },
+      {
+        text: "编码",
         icon: "vue",
         prefix: "",
-        children: ["web/VuePress", "web/docsify", "deploy/VPS"],
+        children: ["code/Markdown.md", "code/Regex.md"],
       },
     ],
   },
