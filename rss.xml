@@ -6,158 +6,19 @@
     <link>https://newzone.top/</link>
     <description>探索、经历、思考、归纳、自我提升，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 13 Aug 2023 08:12:33 GMT</pubDate>
-    <lastBuildDate>Sun, 13 Aug 2023 08:12:33 GMT</lastBuildDate>
+    <pubDate>Sun, 13 Aug 2023 08:19:08 GMT</pubDate>
+    <lastBuildDate>Sun, 13 Aug 2023 08:19:08 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>coding</category>
-    <category>搞机</category>
     <category>行业追踪</category>
+    <category>coding</category>
     <category>java</category>
     <category>生活</category>
-    <item>
-      <title>从微服务来看稳定性建设</title>
-      <link>https://newzone.top/posts/stability-building.html</link>
-      <guid>https://newzone.top/posts/stability-building.html</guid>
-      <source url="https://newzone.top/rss.xml">从微服务来看稳定性建设</source>
-      <description>从微服务看稳定性建设 本文主要依据微服务，从&amp;quot;防范稳定性风险&amp;quot;和&amp;quot;降低故障影响&amp;quot;两个方面简单介绍了稳定性建面临的常见问题。 1.防范稳定性风险 微服务架构让微服务的功能更加内聚，迭代速度更快，但是呢，增加了服务依赖复杂性，进而增大了稳定性建设难度。尽管其依赖关系复杂，但可抽象为上游服务、自身服务、下游服务三者的关系，稳定性风险防范的主要思路是防范三者的风险。 上中下</description>
-      <category>coding</category>
-      <pubDate>Sat, 18 Mar 2023 11:19:38 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 从微服务看稳定性建设</h1>
-<p>本文主要依据微服务，从"防范稳定性风险"和"降低故障影响"两个方面简单介绍了稳定性建面临的常见问题。</p>
-<h2> 1.防范稳定性风险</h2>
-<p>微服务架构让微服务的功能更加内聚，迭代速度更快，但是呢，增加了服务依赖复杂性，进而增大了稳定性建设难度。尽管其依赖关系复杂，但可抽象为上游服务、自身服务、下游服务三者的关系，稳定性风险防范的主要思路是防范三者的风险。</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/上中下.png" alt="上中下" tabindex="0" loading="lazy"><figcaption>上中下</figcaption></figure>
-<h3> 1.1 防范上游风险</h3>
-<blockquote>
-<p>限流，输入校验。</p>
-</blockquote>
-<p>防范上游风险常见的是防范**"流量增加"<strong>和</strong>"输入错误"**风险。预期的流量增加可以提前容量评估并做好相关应对方案；对于非预期的流量增加，依赖提前设置好的限流预案。</p>
-<p>限流的目的是自保或隔离影响，核心流量限流后可评估影响后扩容或临时调整限流阀值。</p>
-<p>"输入错误"常见的是范围参数没有限制，比如预期只查询1天的数据，但请求参数传了查询1个月，因为接口没有限制，导致数据库抗不住压力而 down 机。</p>
-<h3> 1.2 防范下游风险</h3>
-<blockquote>
-<p>解除强依赖，降级、放火验证弱依赖，切流预案。</p>
-</blockquote>
-<p>业内定义，**异常发生时，不影响核心业务流程，不影响系统可用性的依赖称作弱依赖，反之为强依赖。**解除下游风险最直接的方法就是解除下游强依赖。</p>
-<ol>
-<li>在系统设计时要全面分析系统的强弱依赖关系，在系统上线后可以通过工具采集线上流量进一步分析依赖关系。</li>
-<li>需要对历史业务进行改造，并在功能、体验和稳定性方面进行取舍。为了保障稳定性，实现最小化强依赖下游的系统，非核心功能在下游依赖故障时进行功能裁剪，确保核心功能一直可用。</li>
-</ol>
-<p>弱依赖需要建设降级预案。可以使用Sentinel等多种开源流量治理组件。为了保障预案的执行效率，更推荐的做法是业务代码容错+自动熔断功能。</p>
-<p>降级方式的选择与业务降级影响相关性较大，一般降级之后影响较大的使用手动降级，而对于降级之后影响较小或后期能快速自动修复的功能可考虑自动降级。</p>
-<p>需要经常去验证强弱依赖治理情况。如果接口、服务等比较简单，可以使用单测方式进行验证。如果服务多且复杂的话，需要通过<strong>故障演练</strong>定期排查。</p>
-<p>对于无法解除的强依赖，我们可以考虑一些降低风险的方法，提高稳定性，保障不出大事。</p>
-<ol>
-<li>mysql 可以增加足够多的分片来降低单个分片挂掉带来的影响。</li>
-<li>制定良好的应急预案进行兜底，同时应该提供良好的用户体验。</li>
-<li>单机房故障优先考虑切流止损。</li>
-</ol>
-<h3> 1.3 防范自身风险</h3>
-<blockquote>
-<p>架构风险、容量风险，切流预案，线上变更规范，研发和测试质量保障。</p>
-</blockquote>
-<p>比较基本的是通过冗余布署、多活切流来规避单点故障；使用弹性云、自动扩容来减少容量风险。周期性的哨兵压测、全链路压测、模块级的压测进行容量评估。<br>
-从经常引发线上事故的原因中，代码变更和配置变动占极大多数；因此提高研发和测试质量，严守线上变更规范是防范自身风险的重点。</p>
-<p>提高研发质量，这里主要是从稳定性角度看，需要研发的同学有写自动化 case 的意识；虽然短期来看写 case 会增加研发的时间成本，但是 case 可以大大提高后期迭代的测试效率和代码质量；对于核心业务系统，不断迭代是必然的，因此从长远来看写 case 的成本应该是可接受的。</p>
-<h2> 2. 降低故障影响</h2>
-<p>是人就会犯错，因此故障是不可避免的。我们除了防范风险外，还需要一些措施来降低故障带来的影响。</p>
-<h3> 2.1 自身接口降级</h3>
-<blockquote>
-<p>理清核心链路的上游依赖，接口能力降级。</p>
-</blockquote>
-<p>作为业务链路的一部份，需要明确我们的服务在上游核心链路的强弱依赖关系。若上游弱依赖我们的服务，我们需要保障被依赖的接口支持接口能力降级；若上游强依赖我们的服务，则需要考虑推动上游解除对我们服务的强依赖关系，若不能解除的，则需要考虑建设备用的通道或其它能降低上游影响的方案，比如面向用户的故障引导文案、公告等。</p>
-<p>总之，我们不仅需要关注自身服务的稳定性，还需要关注上游对我们服务的依赖关系并建设预案，以此来降低自身服务故障对上游的影响。请注意，这里的接口能力降级与上文的依赖降级是不同的，此处的接口能力降级是自身服务能力降级，目的是减少对上游服务影响；而上文的依赖降级是熔断下游降级，目的是减少自身服务受下游故障影响，这是服务处于不同层级时的不同预案。</p>
-<h3> 2.2 故障感知和定位</h3>
-<blockquote>
-<p>监控报警，故障根因定位，应急响应流程。</p>
-</blockquote>
-<p>核心的服务指标、业务指标的监控和报警尽量100%覆盖，覆盖率是一方面，报警的时效和准确性也是非常关建的。做好链路可观测、日志可追溯、服务器性能可视化，都是故障感知和根因定位的有效工具。</p>
-<p>建设指标时，可以考虑 metric 指标标准化，其不但能降低理解成本，提高问题定位效率。</p>
-<p>在提高核心指标的报警时效和准确性方面，可以考虑从某一个方向重点监控，减少维护的成本，推荐从业务结果指标进行监控（过程指标可用于协助定位问题）。其原因是，业务过程指标多且变更频繁，还可能跨多个系统，较为分散，而其结果往往是收敛的。</p>
-]]></content:encoded>
-      <enclosure url="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/%E4%B8%8A%E4%B8%AD%E4%B8%8B.png" type="image/png"/>
-    </item>
-    <item>
-      <title>红米AX5路由器开启ssh+uu加速器插件</title>
-      <link>https://newzone.top/posts/%E7%BA%A2%E7%B1%B3AX5%E8%B7%AF%E7%94%B1%E5%99%A8%E5%BC%80%E5%90%AFssh_uu%E5%8A%A0%E9%80%9F%E5%99%A8%E6%8F%92%E4%BB%B6.html</link>
-      <guid>https://newzone.top/posts/%E7%BA%A2%E7%B1%B3AX5%E8%B7%AF%E7%94%B1%E5%99%A8%E5%BC%80%E5%90%AFssh_uu%E5%8A%A0%E9%80%9F%E5%99%A8%E6%8F%92%E4%BB%B6.html</guid>
-      <source url="https://newzone.top/rss.xml">红米AX5路由器开启ssh+uu加速器插件</source>
-      <description>redmi AX5 ssh 开启 +uu加速器插件 这个教程将会指导你如何解锁红米 AX5、小米 AX1800 SSH，并安装 ShellClash 插件，用 Clash 实现科学上网。 红米 AX5 和小米 AX1800 可以基本看成一个产品，配置基本相同，外观设计不同。CPU都是：高通 IPQ6000，高通四核1.2GHz。在性能上和小米 AX3600 或者说红米 AX6 差距很大，不是非常推荐购买 AX5 更不推荐购买 AX1800。 1.降级路由器 降级</description>
-      <category>搞机</category>
-      <pubDate>Thu, 23 Mar 2023 14:41:07 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> redmi AX5 ssh 开启 +uu加速器插件</h1>
-<p>这个教程将会指导你如何解锁红米 AX5、小米 AX1800 SSH，并安装 ShellClash 插件，用 Clash 实现科学上网。</p>
-<p>红米 AX5 和小米 AX1800 可以基本看成一个产品，配置基本相同，外观设计不同。CPU都是：高通 IPQ6000，高通四核1.2GHz。在性能上和小米 AX3600 或者说红米 AX6 差距很大，不是非常推荐购买 AX5 更不推荐购买 AX1800。</p>
-<h2> 1.降级路由器</h2>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/202303231447059.png" alt="降级" tabindex="0" loading="lazy"><figcaption>降级</figcaption></figure>
-<blockquote>
-<p>使用这里提供的降级固件，在后台常用设置-系统状态里-手动选择下载好的固件，降级后再解锁 SSH。降级后第一次进入后台配置的时候请选择不自动更新，或者手机小米Wi-Fi App 里关闭系统更新。（目前的系统虽然不是最新的也能够 Mesh 不影响使用，等等吧第三方的 openwrt 已经在路上了）</p>
-</blockquote>
-<blockquote>
-<ul>
-<li><a href="https://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/rm1800/miwifi_rm1800_firmware_fafda_1.0.336.bin" target="_blank" rel="noopener noreferrer">小米 AX1800 1.0.336 下载</a></li>
-<li><a href="https://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/ra67/miwifi_ra67_all_f3fac_1.0.26.bin" target="_blank" rel="noopener noreferrer">红米 AX5 1.0.26 下载</a></li>
-</ul>
-</blockquote>
-<h2> 2. 获取 SSH 权限</h2>
-<h3> 2.1 获取后台 STOK</h3>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988410122-86297696-ed90-404d-8e51-bb29e7dc374a.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
-<blockquote>
-<p>登陆小米路由器后台后，浏览器地址栏 stok= 后面的一段内容即是（选中部分），准备好备用。</p>
-</blockquote>
-<h3> 2.2 获取 SSH</h3>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>将<code>stok</code> 替换为上一步的值，替换完成后复制到浏览器打开。</p>
-<h3> 2.3 修改默认 SSH 密码为 admin</h3>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>将 <code>STOK</code>替换为上上一步的值，替换完成后复制到浏览器打开。</p>
-<h3> 2.4 连接 SSH</h3>
-<p>现在应该可以通过 ssh 连接到 小米 AX1800、红米 AX5 了，终端里执行（密码是 admin，输入不会显示，输入完回车就行）</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>如果提示这种错误 (没有就可以忽略，第一次让你按 yes 即可)</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988418513-42b42fb5-e34e-4dd7-a5fe-5bdb906a1615.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
-<p>你可以删除这个文件的指定行，我这里后面可以看到是 45，或者直接删除这个文件。</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 安装使用 ShellClash</h2>
-<p>SSH 连接上小米 AX1800、红米 AX5 执行安装</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988410725-f5251f65-8f47-446b-bcd6-277e2c278658.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
-<p>选择 1 安装到 /etc，然后再选择 1 确认安装。</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988412091-f566af57-2b60-4e6a-980a-28ac6ea5ab4b.png" alt="img" tabindex="0" loading="lazy"><figcaption>img</figcaption></figure>
-<p>安装好就能使用 clash 命令了 ，输入 clash 就能进入配置。这里选择 4 让局域网设备都能走代理（如果你清楚别的可以自行选择）。</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988417281-c79ec77f-cdb1-49ed-b6ad-512a38dd4ecb.png" alt="img" tabindex="0" loading="lazy"><figcaption>img</figcaption></figure>
-<p>推荐选择不代理 UDP 也就是 1，然后安装 DashBoard 面板也就能网页直接控制了也就是 1 。</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988430529-eaa96afe-98fa-4830-ac23-4864780c5850.png" alt="img" tabindex="0" loading="lazy"><figcaption>img</figcaption></figure>
-<p>推荐选择 Yacd 面板，界面很好看 选择 2，然后安装目录选择 1 即可。</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988433681-212a8a5d-46c2-4577-a4b5-9b44c556ee88.png" alt="img" tabindex="0" loading="lazy"><figcaption>img</figcaption></figure>
-<p>1 选择导入配置文件。如果你没有 Clash 的配置文件而是 v2ray、ss、trojan 的订阅链接（你的机场会提供），你可以再选择 1 进行「在线生成 Clash 配置文件」；如果有的话可以选择 2 直接导入配置文件。</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988435684-db6b45e7-eb1e-434a-9977-05df0766056e.png" alt="img" tabindex="0" loading="lazy"><figcaption>img</figcaption></figure>
-<p>然后粘贴上你的订阅链接（url 链接），再选择 1 开始生成配置文件。生成配置文件后按 0 返回上层菜单即可。</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988437454-8a61ef8b-3c01-4629-9c02-13eb08180991.png" alt="img" tabindex="0" loading="lazy"><figcaption>img</figcaption></figure>
-<p>再按 1 选择立即开启 Clash 的服务即可。</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988436375-fa1bfb6e-bc3b-423e-a4c9-1609ea01bb0b.png" alt="img" tabindex="0" loading="lazy"><figcaption>img</figcaption></figure>
-<p>启动后你可以通过 <a href="http://192.168.31.1:9999/ui%EF%BC%8C%E8%BF%9B%E8%A1%8C%E8%8A%82%E7%82%B9%E7%9A%84%E5%88%87%E6%8D%A2%E5%92%8C%E8%A7%84%E5%88%99%E7%9A%84%E9%80%89%E6%8B%A9%E3%80%82%E5%BD%93%E7%84%B6%E4%BD%A0%E5%86%8D%E6%8C%89" target="_blank" rel="noopener noreferrer">http://192.168.31.1:9999/ui，进行节点的切换和规则的选择。当然你再按</a> 4 选择开机启动也可以。</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988437829-156951fe-438c-4920-9534-9f09225a1b17.png" alt="img" tabindex="0" loading="lazy"><figcaption>img</figcaption></figure>
-<p>这个时候应该就能科学上网了速度也应该还可以。</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2> UU加速器插件</h2>
-<h3> 前置条件</h3>
-<ol>
-<li>已经刷好开发版本路由器固件</li>
-<li>能启用ssh连接</li>
-<li>下载网易uu主机加速app</li>
-</ol>
-<h3> 在app上点击安装路由器插件</h3>
-<p>这个时候会提示路由器设备不支持。不过没关系，因为我们已经支持ssh访问了，用ssh方式安装。</p>
-<h4> 1. 通过SSH进入路由器内部</h4>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988511569-ce00a7d3-b025-4a95-9ed2-322799537822.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
-<h4> 2. 运行UU路由器插件安装指令</h4>
-<p>这里直接详见<a href="https://uu.163.com/router/direction.html" target="_blank" rel="noopener noreferrer">uu加速器中的<strong>OpenWrt</strong>安装方法</a></p>
-<p>其中 opkg update 步骤可能失败。不用关心，别的步骤能成功就行</p>
-<h4> 第三步：主机加速 App</h4>
-<p>打开App并登录后，手机会把我的AX5认为是OpenWrt路由器的网络，点击下一步操作即可</p>
-]]></content:encoded>
-      <enclosure url="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/202303231447059.png" type="image/png"/>
-    </item>
+    <category>工作心得</category>
     <item>
       <title>AI工具介绍</title>
-      <link>https://newzone.top/posts/AI%E5%B7%A5%E5%85%B7.html</link>
-      <guid>https://newzone.top/posts/AI%E5%B7%A5%E5%85%B7.html</guid>
+      <link>https://newzone.top/posts/AI-tools.html</link>
+      <guid>https://newzone.top/posts/AI-tools.html</guid>
       <source url="https://newzone.top/rss.xml">AI工具介绍</source>
       <description>AI工具介绍 随着当前网络数据量的爆发，基于大数据的AI，现在越来越智能了。尤其是chatgpt的推出，AI使用越来越广泛。 本文主要介绍当前广泛使用的AI工具。 chatGPT ChatGPT是一种基于Transformer架构的深度学习模型，可以对语言进行建模和生成。它可以处理问答、对话生成、文本生成等多种任务，可以认为是当前最为智能的AI工具。甚至有人将其称为新时代的奠基者，我们将从互联网时代进入AI时代。 当前chatGPT有两种使用方法： 通过官网使用。 通过chatGPT - API 使用</description>
       <category>行业追踪</category>
@@ -237,8 +98,8 @@
     </item>
     <item>
       <title>ConcurrentHashMap 源码分析</title>
-      <link>https://newzone.top/posts/ConcurrentHashMap%20%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90.html</link>
-      <guid>https://newzone.top/posts/ConcurrentHashMap%20%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90.html</guid>
+      <link>https://newzone.top/posts/ConcurrentHashMap-analyse.html</link>
+      <guid>https://newzone.top/posts/ConcurrentHashMap-analyse.html</guid>
       <source url="https://newzone.top/rss.xml">ConcurrentHashMap 源码分析</source>
       <description>ConcurrentHashMap类图 image-20230321163458604 根据类图看出来，ConcurrentHashMap实现了 Map 接口，继承了 AbstractMap 抽象类，所以大多数的方法也都和我们平时用到的HashMap是相同的，HashMap 有的方法，ConcurrentHashMap 几乎都有，所以当我们需要从 HashMap 切换到 ConcurrentHashMap 时，无需关心两者之间的兼容问题。</description>
       <category>coding</category>
@@ -319,8 +180,8 @@
     </item>
     <item>
       <title>Dubbo-SPI解析</title>
-      <link>https://newzone.top/posts/Dubbo-SPI%E8%A7%A3%E6%9E%90.html</link>
-      <guid>https://newzone.top/posts/Dubbo-SPI%E8%A7%A3%E6%9E%90.html</guid>
+      <link>https://newzone.top/posts/Dubbo-SPI.html</link>
+      <guid>https://newzone.top/posts/Dubbo-SPI.html</guid>
       <source url="https://newzone.top/rss.xml">Dubbo-SPI解析</source>
       <description>Dubbo SPI 解析（Java SPI解析）（上） SPI是什么 SPI全称Service Provider Interface，是Java提供的一套用来被第三方实现或者扩展的API，它可以用来启用框架扩展和替换组件。 image-20230331142758791</description>
       <category>java</category>
@@ -376,8 +237,8 @@ Java SPI就是提供这样的一个机制：为某个接口寻找服务实现的
     </item>
     <item>
       <title>Dubbo时间轮</title>
-      <link>https://newzone.top/posts/Dubbo%E6%97%B6%E9%97%B4%E8%BD%AE.html</link>
-      <guid>https://newzone.top/posts/Dubbo%E6%97%B6%E9%97%B4%E8%BD%AE.html</guid>
+      <link>https://newzone.top/posts/Dubbo-time-wheel.html</link>
+      <guid>https://newzone.top/posts/Dubbo-time-wheel.html</guid>
       <source url="https://newzone.top/rss.xml">Dubbo时间轮</source>
       <description>Dubbo时间轮 时间轮是一种高效的、批量管理定时任务的调度模型。时间轮一般会实现成一个环形结构，类似一个时钟，分为很多槽，一个槽代表一个时间间隔，每个槽使用双向链表存储定时任务；指针周期性地跳动，跳动到一个槽位，就执行该槽位的定时任务。 1.png</description>
       <category>java</category>
@@ -480,8 +341,8 @@ Java SPI就是提供这样的一个机制：为某个接口寻找服务实现的
     </item>
     <item>
       <title>LPL英文流观赛常见词语</title>
-      <link>https://newzone.top/posts/LPL%E8%8B%B1%E6%96%87%E6%B5%81%E8%A7%82%E8%B5%9B%E5%B8%B8%E8%A7%81%E8%AF%8D%E8%AF%AD.html</link>
-      <guid>https://newzone.top/posts/LPL%E8%8B%B1%E6%96%87%E6%B5%81%E8%A7%82%E8%B5%9B%E5%B8%B8%E8%A7%81%E8%AF%8D%E8%AF%AD.html</guid>
+      <link>https://newzone.top/posts/LPL-English-words.html</link>
+      <guid>https://newzone.top/posts/LPL-English-words.html</guid>
       <source url="https://newzone.top/rss.xml">LPL英文流观赛常见词语</source>
       <description>LPL英文流观赛常见词语 兴趣会让人进步更快，所以最近开始看起了英文流解说的LPL比赛。一开始必然会有很多专业性的词语听不懂，以及游戏解说们的口速都是飞快的。。。 所以看起来还是比较难。但是好在自身能分析游戏战况，能大致清楚当前发生了什么事情。所以了解一些常用词语，以及听懂一些关键词，对于听懂英文流解说还是有很大帮助的。听懂关键词+ 自己对游戏的了解 大致和 解说想表达的意思差不多多少。 分路 top 上路 mid 中路 jug 打野 adc 下路 sup 辅助</description>
       <category>生活</category>
@@ -1092,8 +953,8 @@ Java SPI就是提供这样的一个机制：为某个接口寻找服务实现的
     </item>
     <item>
       <title>MAT(Java堆分析工具)使用方式</title>
-      <link>https://newzone.top/posts/MAT(Java%E5%A0%86%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7)%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.html</link>
-      <guid>https://newzone.top/posts/MAT(Java%E5%A0%86%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7)%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.html</guid>
+      <link>https://newzone.top/posts/MAT.html</link>
+      <guid>https://newzone.top/posts/MAT.html</guid>
       <source url="https://newzone.top/rss.xml">MAT(Java堆分析工具)使用方式</source>
       <description>MAT(Java堆分析工具)使用方式 最近在整理笔记，发现之前在分析JAVA内存问题时写的Mat工具文档还是蛮清晰的，现重新整理一下，分享出来。 MAT是个啥 MAT 全称 Eclipse Memory Analysis Tools 是一个分析 Java堆数据的专业工具，可以计算出内存中对象的实例数量、占用空间大小、引用关系等，看看是谁阻止了垃圾收集器的回收工作，从而定位内存泄漏的原因。 什么时候会用到 OutOfMemoryError的时候，触发full gc，但空间却回收不了，引发内存泄露 java服务器系统异常，比如load飙高，io异常，或者线程死锁等，都可能通过分析堆中的内存对象来定位原因</description>
       <category>coding</category>
@@ -1200,8 +1061,8 @@ Java SPI就是提供这样的一个机制：为某个接口寻找服务实现的
     </item>
     <item>
       <title>chatGPT.md</title>
-      <link>https://newzone.top/posts/chatGPT-md.html</link>
-      <guid>https://newzone.top/posts/chatGPT-md.html</guid>
+      <link>https://newzone.top/posts/chatGPT.html</link>
+      <guid>https://newzone.top/posts/chatGPT.html</guid>
       <source url="https://newzone.top/rss.xml">chatGPT.md</source>
       <description>chatGPT prompt 工程 什么是 Prompt 工程？ Prompt 工程是创建提示或指导像 ChatGPT 这样的语言模型输出的过程。它允许用户控制模型的输出并生成符合其特定需求的文本。 ChatGPT 是一种先进的语言模型，能够生成类似于人类的文本。它建立在 Transformer 架构上，可以处 理大量数据并生成高质量的文本。 然而，为了从 ChatGPT 中获得最佳结果，重要的是要了解如何正确地提示模型。 提示可以让用户控制 模型的输出并生成相关、准确和高质量的文本。 在使用 ChatGPT 时，了解它的能力和限制非常重要。 该模型能够生成类似于人类的文本，但如果没有适当的指导，它可能无法始终产生期望的输出。 这就是 Prompt 工程的作用，通过提供清晰而具体的指令，您可以引导模型的输出并确保其相关。 Prompt 公式是提示的特定格式，通常由三个主要元素组成：</description>
       <category>行业追踪</category>
@@ -1663,34 +1524,217 @@ Java SPI就是提供这样的一个机制：为某个接口寻找服务实现的
 ]]></content:encoded>
     </item>
     <item>
-      <title>colima</title>
-      <link>https://newzone.top/posts/colima.html</link>
-      <guid>https://newzone.top/posts/colima.html</guid>
-      <source url="https://newzone.top/rss.xml">colima</source>
-      <description>Docker Colima 在mac 上，要运行docker ，需要通过docker desktop 创建docker运行的环境，但是这玩意太重了，风扇总是飞起。于是找到了一个代替docker desktop的轻量级工具，缺点是没有可视化界面。 介绍 Colima 是一个以最小化设置来在MacOS上运行容器运行时和 Kubernetes 的工具。</description>
+      <title>代码CR模板</title>
+      <link>https://newzone.top/posts/code-cr.html</link>
+      <guid>https://newzone.top/posts/code-cr.html</guid>
+      <source url="https://newzone.top/rss.xml">代码CR模板</source>
+      <description>代码CR模板 基础篇 编码风格遵循阿里巴巴Java开发手册 大型复杂流程程序必须提供流程图、时序图 被cr同学在cr开始需简单叙述项目大小及其背景，复杂流程需要cr实现逻辑是否match技术方案，减少实现跟技术方案的gap 业务逻辑划分是否合理,是否耦合 业务逻辑涉及领域的逻辑，明显或耦合的业务逻辑建议拆分 代码编码逻辑是否清晰 被cr同学需要讲清楚主干逻辑 合理有效的注释 逻辑复杂的代码或cr有疑问的逻辑,要求补充合理有效的注释 是否存在冗余代码 多余或者没有引用的代码建议删除 是否存在潜在NPE NPE是日常工作必出现的bug 上下文字段使用不判空，getXX()操作，基本类型拆箱，需要防御式判断或Optional 日志打印规范 强制使用占位符进行日志打印，因为字符串拼接会使用 StringBuilder 的 append() 方式,有一定的性能损耗 logger.info(&amp;quot;are u ok : oid 1&amp;quot;, oid); logger.info(&amp;quot;are u ok : oid 1&amp;quot;, oid); 有没有maven依赖冲突 很多时候诡异的运行时bug，往往由于依赖冲突导致，cr建议确认是否有pom变更 资源释放 无论是网络io还是文件io、资源释放的逻辑需要被cr到 统一错误码 禁止统一返回-1、500等错误码，最好定义枚举，方便追溯问题 异常的处理 出现异常的地方需要确认是否需要进行一下操作：直接返回、抛出异常、重试处理、恢复处理、熔断处理、降级处理、关闭业务</description>
+      <category>工作心得</category>
+      <pubDate>Sun, 02 Apr 2023 00:34:27 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 代码CR模板</h1>
+<h2> 基础篇</h2>
+<ol>
+<li>
+<p>编码风格遵循阿里巴巴Java开发手册</p>
+</li>
+<li>
+<p>大型复杂流程程序必须提供流程图、时序图</p>
+<ol>
+<li>被cr同学在cr开始需简单叙述项目大小及其背景，复杂流程需要cr实现逻辑是否match技术方案，减少实现跟技术方案的gap</li>
+</ol>
+</li>
+<li>
+<p>业务逻辑划分是否合理,是否耦合</p>
+<ol>
+<li>业务逻辑涉及领域的逻辑，明显或耦合的业务逻辑建议拆分</li>
+</ol>
+</li>
+<li>
+<p>代码编码逻辑是否清晰</p>
+<ol>
+<li>被cr同学需要讲清楚主干逻辑</li>
+</ol>
+</li>
+<li>
+<p>合理有效的注释</p>
+<ol>
+<li>逻辑复杂的代码或cr有疑问的逻辑,要求补充合理有效的注释</li>
+</ol>
+</li>
+<li>
+<p>是否存在冗余代码</p>
+<ol>
+<li>多余或者没有引用的代码建议删除</li>
+</ol>
+</li>
+<li>
+<p>是否存在潜在NPE</p>
+<ol>
+<li>
+<blockquote>
+<p>NPE是日常工作必出现的bug</p>
+<p>上下文字段使用不判空，getXX()操作，基本类型拆箱，需要防御式判断或Optional</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li>
+<p>日志打印规范</p>
+<ol>
+<li>
+<p>强制使用占位符进行日志打印，因为字符串拼接会使用 StringBuilder 的 append() 方式,有一定的性能损耗</p>
+<blockquote>
+<p><a href="http://logger.info" target="_blank" rel="noopener noreferrer">logger.info</a>("are u ok : oid 1", oid);<br>
+<a href="http://logger.info" target="_blank" rel="noopener noreferrer">logger.info</a>("are u ok : oid 1", oid);</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li>
+<p>有没有maven依赖冲突</p>
+<ul>
+<li>很多时候诡异的运行时bug，往往由于依赖冲突导致，cr建议确认是否有pom变更</li>
+</ul>
+</li>
+<li>
+<p>资源释放</p>
+<ul>
+<li>无论是网络io还是文件io、资源释放的逻辑需要被cr到</li>
+</ul>
+</li>
+<li>
+<p>统一错误码</p>
+<ul>
+<li>禁止统一返回-1、500等错误码，最好定义枚举，方便追溯问题</li>
+</ul>
+</li>
+<li>
+<p>异常的处理</p>
+<ul>
+<li>出现异常的地方需要确认是否需要进行一下操作：直接返回、抛出异常、重试处理、恢复处理、熔断处理、降级处理、关闭业务</li>
+</ul>
+</li>
+</ol>
+<h2> 初级篇</h2>
+<ol>
+<li>数据库索引设计是否合理、是否生效
+<ul>
+<li>被cr同学要讲清楚设计索引的原因以及效果</li>
+</ul>
+</li>
+<li>代码是否可以使用设计模式或者设计模式是否过度设计
+<ul>
+<li>if/else 过多或者场景分发类逻辑，建议采用策略模式</li>
+<li>不建议小的需求、进行复杂的继承抽象逻辑，良好的设计是模型的合理</li>
+<li>不建议引入复杂的框架解决简单问题，有些同学热衷于一个框架搞定所有架构(比如ddd cola)， 毕竟代码的历史性、复杂度框架是评估不了的、好的业务框架脚手架更倾向于用这种思想解决问题，而非照搬</li>
+</ul>
+</li>
+<li>中间件使用是否最佳实践
+<ul>
+<li>比如mq消费是否正确ack、还是需要重试、还是丢弃</li>
+<li>比如redis是否存在大key设计、需要进行合理设计</li>
+<li>比如es查询是否设置合理超时时间</li>
+</ul>
+</li>
+<li>线程池使用、参数是否正确、是否业务隔离
+<ul>
+<li>是否使用公司框架或jdk自带带参线程池构建方法</li>
+<li>线程数、队列大小是否配置合理</li>
+<li>多业务或调用方、是否配置隔离线程池</li>
+</ul>
+</li>
+<li>如果使用锁，锁范围、粒度是否合适
+<ul>
+<li>分布式锁的锁区间需要check是否影响其他</li>
+</ul>
+</li>
+<li>事务处理：是否需要事务，事务是否生效
+<ul>
+<li>持久化操作是否没有加事务</li>
+<li>类内部调用是否导致事务没生效</li>
+</ul>
+</li>
+</ol>
+<h2> 进阶篇</h2>
+<h3> 性能优化</h3>
+<ol>
+<li>需要缓存的地方是否添加缓存
+<ul>
+<li>比如依赖的外部接口性能差、添加合适的缓存解决查询问题</li>
+</ul>
+</li>
+<li>乐观锁代替悲观锁</li>
+<li>多接口聚合采用多线程加速</li>
+</ol>
+<h3> 一致性</h3>
+<h3> 幂等性</h3>
+<ol>
+<li>基于状态的幂等
+<ul>
+<li>基于状态，也就是是说调用该接口，会导致状态变化，如果状态已经发生变化，那么就直接返回<br>
+之前的结果即可</li>
+</ul>
+</li>
+<li>基于某个key的幂等
+<ul>
+<li>通常使用单独的字段来绑定或者日志表来记录，如果存在，直接返回</li>
+</ul>
+</li>
+</ol>
+<h3> 重试</h3>
+<ol>
+<li>接口调用失败重试
+<ol>
+<li>存在写操作的的外部接口建议不重试、让外部重新发起请求如果需要发起重试、</li>
+<li>check提供的接口支持幂等返回</li>
+</ol>
+</li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>散列算法</title>
+      <link>https://newzone.top/posts/hash.html</link>
+      <guid>https://newzone.top/posts/hash.html</guid>
+      <source url="https://newzone.top/rss.xml">散列算法</source>
+      <description>散列 散列（Hash）也称为哈希，就是把任意长度的输入，通过散列算法，变换成固定长度的输出，这个输出值就是散列值。 散列算法 在实际使用中，不同的输入可能会散列成相同的输出，这时也就产生了冲突。 这时候，我们就希望有一些算法可以保证散列表的足够散列程度，降低冲突几率。 散列算法的宗旨就是：构造冲突较低的散列地址，保证散列表中数据的离散度。 除法散列法 散列长度 m, 对于一个小于 m 的数 p 取模，所得结果为散列地址。对 p 的选择很重要，一般取素数或 m f(k) = k % p （p&amp;lt;=m）</description>
       <category>coding</category>
-      <pubDate>Wed, 29 Mar 2023 16:51:47 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> Docker Colima</h1>
-<p>在mac 上，要运行docker ，需要通过docker desktop 创建docker运行的环境，但是这玩意太重了，风扇总是飞起。于是找到了一个代替docker desktop的轻量级工具，缺点是没有可视化界面。</p>
-<h2> 介绍</h2>
-<p><a href="https://github.com/abiosoft/colima" target="_blank" rel="noopener noreferrer">Colima</a> 是一个以最小化设置来在MacOS上运行容器运行时和 Kubernetes 的工具。</p>
-<p>Colima 的名字取自 Container on Lima。<a href="https://github.com/lima-vm/lima" target="_blank" rel="noopener noreferrer">Lima</a> 是一个虚拟机工具，可以实现自动的文件共享、端口转发以及 containerd。</p>
-<p>Colima 实际上是通过 Lima 启动了名为 colima 的虚拟机，使用虚拟机中的 containerd 作为容器运行时。</p>
-<h2> 使用</h2>
-<p>Colima 的使用很简单，执行下面的命令就可以创建虚拟机，默认是 Docker 的运行时。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>此时，在宿主机上就可以使用 Docker 相关的命令了</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>也可以使用 Lima 的命令行 limact工具查看虚拟机的情况</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 虚拟机配置</h2>
-<p>Colima 启动的虚拟机默认是 2CPU、2GiB 内存 和 60GiB 存储。可以在创建时通过 --cpu 、--memory 和 --disk 来分配更多资源。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>也可以修改当前虚拟机的配置：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>当然colima除了docker也是支持containerd的</p>
-<p>在此之前先删除原来生成的虚拟机</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>之后创建新的虚拟机</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>创建完成之后查看容器</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>或者运行一个容器</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>除了containerd colima还支持创建k8s</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>支持自定义虚拟机大小</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></content:encoded>
+      <pubDate>Fri, 24 Mar 2023 21:19:58 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 散列</h1>
+<p>散列（Hash）也称为哈希，就是把任意长度的输入，通过散列算法，变换成固定长度的输出，这个输出值就是散列值。</p>
+<h1> 散列算法</h1>
+<p>在实际使用中，不同的输入可能会散列成相同的输出，这时也就产生了冲突。 这时候，我们就希望有一些算法可以保证散列表的足够散列程度，降低冲突几率。</p>
+<p>散列算法的宗旨就是：构造冲突较低的散列地址，保证散列表中数据的离散度。</p>
+<h2> 除法散列法</h2>
+<p>散列长度 m, 对于一个小于 m 的数 p 取模，所得结果为散列地址。对 p 的选择很重要，一般取素数或 m</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>因为求模数其实是通过一个除法运算得到的，所以叫“除法散列法”</p>
+<h2> 平方散列法（平方取中法）</h2>
+<p>先通过求关键字的平方值扩大相近数的差别，然后根据表长度取中间的几位数作为散列函数值。又因为一个乘积的中间几位数和乘数的每一位都相关，所以由此产生的散列地址较为均匀。</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2> 随机数法</h2>
+<p>选择一随机函数，取关键字的随机值作为散列地址，通常用于关键字长度不同的场合。</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 斐波那契（Fibonacci）散列法</h2>
+<p>当我们查看 ThreadLocal 执行设置元素时，有这么一段计算哈希值的代码；</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>ThreadLocal 使用的就是 斐波那契（Fibonacci）散列法 + 开放寻址法存储数据到数组结构中。之所以使用斐波那契数列，是为了让数据更加散列，减少哈希碰撞。具体来自数学公式的计算求值。<br>
+公式：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3> todo</h3>
+<p>通过数据对散列程度进行比对</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>找工作有感.md</title>
+      <link>https://newzone.top/posts/jobs.html</link>
+      <guid>https://newzone.top/posts/jobs.html</guid>
+      <source url="https://newzone.top/rss.xml">找工作有感.md</source>
+      <description>找工作有感 3月份从上家公司离职，玩了一段时间，最近开始找起工作来了。平时一直用语雀去记录工作和JAVA相关的一些知识点的总结，今天在使用时觉得卡顿了。。然后看了一下，没想到已经写（抄、总结）了这么多的文档，有点吓到自己了。。。而且感觉还是差很多东西。。。知识点实在是太多了。 说实话，这么多文档，面试时看都看不过来了。。还是得努力啊。。。 生活好难啊。。。 image-20230508230238108</description>
+      <category>工作心得</category>
+      <pubDate>Mon, 08 May 2023 22:57:44 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 找工作有感</h2>
+<p>3月份从上家公司离职，玩了一段时间，最近开始找起工作来了。平时一直用语雀去记录工作和JAVA相关的一些知识点的总结，今天在使用时觉得卡顿了。。然后看了一下，没想到已经写（抄、总结）了这么多的文档，有点吓到自己了。。。而且感觉还是差很多东西。。。知识点实在是太多了。</p>
+<p>说实话，这么多文档，面试时看都看不过来了。。还是得努力啊。。。</p>
+<p>生活好难啊。。。</p>
+<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230508230238108.png" alt="image-20230508230238108" tabindex="0" loading="lazy"><figcaption>image-20230508230238108</figcaption></figure>
+]]></content:encoded>
+      <enclosure url="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230508230238108.png" type="image/png"/>
     </item>
   </channel>
 </rss>
