@@ -27,7 +27,7 @@ export default navbar([
     icon: "app",
     prefix: "/",
     children: [
-      "apps/Applist",
+      // "apps/Applist",
       // {
       //   text: "直播手册",
       //   icon: "quote",
