@@ -28,16 +28,16 @@ export default navbar([
     prefix: "/",
     children: [
       "apps/Applist",
-      {
-        text: "直播手册",
-        icon: "quote",
-        link: "apps/livestreaming/1_obs_basic",
-      },
+      // {
+      //   text: "直播手册",
+      //   icon: "quote",
+      //   link: "apps/livestreaming/1_obs_basic",
+      // },
       {
         text: "服务/系统",
         icon: "any",
         prefix: "",
-        children: ["services/NAS", "windows/faq"],
+        children: [],
       },
     ],
   },
@@ -48,22 +48,15 @@ export default navbar([
     children: ["Diet", "Shoppinglist", "Coupon"],
   },
   {
-    text: "工具",
-    icon: "tool",
+    text: "游戏",
+    icon: "game",
     children: [
-      {
-        text: "ChatGPT SC",
-        icon: "creative",
-        link: "https://www.aishort.top/",
-      },
-      { text: "IMGPrompt", icon: "pic", link: "https://prompt.newzone.top/" },
-      { text: "文字处理", icon: "others", link: "https://tools.newzone.top/" },
-      {
-        text: "工具收藏",
-        icon: "categoryselected",
-        link: "https://nav.newzone.top/",
-      },
+
     ],
+  },
+  {
+    text: "英语",
+    children: [],
   },
   {
     text: "Contact",
@@ -72,11 +65,11 @@ export default navbar([
       {
         text: "微信",
         icon: "wechat",
-        link: "https://img.newzone.top/wechat.svg",
+        // link: "https://img.newzone.top/wechat.svg",
       },
-      { text: "Email", icon: "alias", link: "mailto:learndata@newzone.top" },
-      { text: "Discord", icon: "group", link: "https://discord.gg/PZTQfJ4GjX" },
-      { text: "RSS", icon: "rss", link: "https://newzone.top/rss.xml" },
+      { text: "Email", icon: "alias", link: "mailto:wweiooogo@gmail.com" },
+      // { text: "Discord", icon: "group", link: "https://discord.gg/PZTQfJ4GjX" },
+      // { text: "RSS", icon: "rss", link: "https://newzone.top/rss.xml" },
     ],
   },
 ]);
