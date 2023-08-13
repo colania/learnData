@@ -49,13 +49,12 @@ export default navbar([
   },
   {
     text: "游戏",
-    icon: "game",
-    children: [
-
-    ],
+    // icon: "game",
+    children: [],
   },
   {
     text: "英语",
+    // icon: "english",
     children: [],
   },
   {
