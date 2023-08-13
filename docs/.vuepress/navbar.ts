@@ -48,12 +48,14 @@ export default navbar([
     children: ["Diet", "Shoppinglist", "Coupon"],
   },
   {
-    text: "游戏",
+    text: "金融",
+    icon: "emmet",
     // icon: "game",
     children: [],
   },
   {
     text: "英语",
+    icon: "emmet",
     // icon: "english",
     children: [],
   },
@@ -64,11 +66,11 @@ export default navbar([
       {
         text: "微信",
         icon: "wechat",
-        // link: "https://img.newzone.top/wechat.svg",
+        link: "https://img.newzone.top/wechat.svg",
       },
       { text: "Email", icon: "alias", link: "mailto:wweiooogo@gmail.com" },
-      // { text: "Discord", icon: "group", link: "https://discord.gg/PZTQfJ4GjX" },
-      // { text: "RSS", icon: "rss", link: "https://newzone.top/rss.xml" },
+      { text: "Discord", icon: "group", link: "https://discord.gg/PZTQfJ4GjX" },
+      { text: "RSS", icon: "rss", link: "https://newzone.top/rss.xml" },
     ],
   },
 ]);
