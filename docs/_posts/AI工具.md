@@ -1,9 +1,9 @@
 ---
 title: AI工具介绍
 date: 2023-03-18 11:20:09
-categories:
+category:
 - 行业追踪
-tags:
+tag:
     - AI
 ---
 

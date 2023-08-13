@@ -1,9 +1,9 @@
 ---
 title: Dubbo-SPI解析
 date: 2023-03-31 13:40:43
-categories:
+category:
   - java
-tags:
+tag:
   - dubbo系列
 ---
 

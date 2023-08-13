@@ -1,9 +1,9 @@
 ---
 title: chatGPT.md
 date: 2023-06-04 23:09:24
-categories:
+category:
 - 行业追踪
-tags:
+tag:
     - AI
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: 自行更换Macbook Pro A1708电池
 date: 2023-03-31 10:56:05
-categories:
+category:
     - 搞机
-tags:
+tag:
     - 维修 
 ---
 

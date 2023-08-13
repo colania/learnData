@@ -1,11 +1,10 @@
 ---
 title: 红米AX5路由器开启ssh+uu加速器插件
 date: 2023-03-23 14:41:07
-categories:
+category:
     - 搞机
-tags:
+tag:
     - 科学上网 
-
 ---
 # redmi AX5 ssh 开启 +uu加速器插件
 这个教程将会指导你如何解锁红米 AX5、小米 AX1800 SSH，并安装 ShellClash 插件，用 Clash 实现科学上网。 

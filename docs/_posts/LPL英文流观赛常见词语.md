@@ -1,9 +1,9 @@
 ---
 title: LPL英文流观赛常见词语
 date: 2023-04-05 20:05:58
-categories:
+category:
 	- 生活
-tags:
+tag:
   - 英语
 ---
 

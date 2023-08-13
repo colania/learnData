@@ -1,9 +1,9 @@
 ---
 title: Dubbo时间轮
 date: 2023-04-02 21:58:16
-categories:
+category:
   - java
-tags:
+tag:
   - dubbo系列
 ---
 

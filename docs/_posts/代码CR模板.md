@@ -1,7 +1,7 @@
 ---
 title: 代码CR模板
 date: 2023-04-02 00:34:27
-categories:
+category:
     - 工作心得
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: colima
 date: 2023-03-29 16:51:47
-categories:
+category:
 	- coding
-tags:
+tag:
     - tools
 ---
 

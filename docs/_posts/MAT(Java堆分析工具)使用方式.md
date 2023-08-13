@@ -1,9 +1,9 @@
 ---
 title: MAT(Java堆分析工具)使用方式
 date: 2023-03-29 15:11:29
-categories:
+category:
   - coding
-tags:
+tag:
   - tools
 ---
 
