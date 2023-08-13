@@ -49,13 +49,13 @@ export default navbar([
   },
   {
     text: "金融",
-    icon: "emmet",
+    icon: "sspai",
     // icon: "game",
     children: [],
   },
   {
     text: "英语",
-    icon: "emmet",
+    icon: "quote",
     // icon: "english",
     children: [],
   },
