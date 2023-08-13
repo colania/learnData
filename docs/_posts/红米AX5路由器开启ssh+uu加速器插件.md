@@ -6,6 +6,7 @@ category:
 tag:
     - 科学上网 
 ---
+
 # redmi AX5 ssh 开启 +uu加速器插件
 这个教程将会指导你如何解锁红米 AX5、小米 AX1800 SSH，并安装 ShellClash 插件，用 Clash 实现科学上网。 
 
@@ -16,8 +17,8 @@ tag:
 
 > 使用这里提供的降级固件，在后台常用设置-系统状态里-手动选择下载好的固件，降级后再解锁 SSH。降级后第一次进入后台配置的时候请选择不自动更新，或者手机小米Wi-Fi App 里关闭系统更新。（目前的系统虽然不是最新的也能够 Mesh 不影响使用，等等吧第三方的 openwrt 已经在路上了） 
 
-* [小米 AX1800 1.0.336 下载](https://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/rm1800/miwifi_rm1800_firmware_fafda_1.0.336.bin)
-* [红米 AX5 1.0.26 下载](https://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/ra67/miwifi_ra67_all_f3fac_1.0.26.bin)
+> * [小米 AX1800 1.0.336 下载](https://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/rm1800/miwifi_rm1800_firmware_fafda_1.0.336.bin)
+> * [红米 AX5 1.0.26 下载](https://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/ra67/miwifi_ra67_all_f3fac_1.0.26.bin)
 
 ## 2. 获取 SSH 权限
 
@@ -25,7 +26,7 @@ tag:
 
 ![image.png](https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988410122-86297696-ed90-404d-8e51-bb29e7dc374a.png)
 
-登陆小米路由器后台后，浏览器地址栏 stok= 后面的一段内容即是（选中部分），准备好备用。
+> 登陆小米路由器后台后，浏览器地址栏 stok= 后面的一段内容即是（选中部分），准备好备用。
 
 ### 2.2 获取 SSH
 
@@ -33,7 +34,7 @@ tag:
 http://192.168.31.1/cgi-bin/luci/;stok=[stok]/api/misystem/set_config_iotdev?bssid=Xiaomi&user_id=longdike&ssid=-h%3B%20nvram%20set%20ssh_en%3D1%3B%20nvram%20commit%3B%20sed%20-i%20's%2Fchannel%3D.*%2Fchannel%3D%5C%22debug%5C%22%2Fg'%20%2Fetc%2Finit.d%2Fdropbear%3B%20%2Fetc%2Finit.d%2Fdropbear%20start%3B 
 ```
 
-将 <STOK> 替换为上一步的值，替换完成后复制到浏览器打开。
+将`stok` 替换为上一步的值，替换完成后复制到浏览器打开。
 
 ### 2.3 修改默认 SSH 密码为 admin
 
@@ -41,7 +42,7 @@ http://192.168.31.1/cgi-bin/luci/;stok=[stok]/api/misystem/set_config_iotdev?bss
 http://192.168.31.1/cgi-bin/luci/;stok=[stok]/api/misystem/set_config_iotdev?bssid=Xiaomi&user_id=longdike&ssid=-h%3B%20echo%20-e%20'admin%5Cnadmin'%20%7C%20passwd%20root%3B 
 ```
 
-将 <STOK> 替换为上上一步的值，替换完成后复制到浏览器打开。
+将 `STOK`替换为上上一步的值，替换完成后复制到浏览器打开。
 
 ### 2.4 连接 SSH
 
