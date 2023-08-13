@@ -1,4 +1,4 @@
----
+<!-- ---
 title: 红米AX5路由器开启ssh+uu加速器插件
 date: 2023-03-23 14:41:07
 category:
@@ -14,7 +14,8 @@ tag:
 ## 1.降级路由器
 ![降级](https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/202303231447059.png)  
 
-使用这里提供的降级固件，在后台常用设置-系统状态里-手动选择下载好的固件，降级后再解锁 SSH。降级后第一次进入后台配置的时候请选择不自动更新，或者手机小米Wi-Fi App 里关闭系统更新。（目前的系统虽然不是最新的也能够 Mesh 不影响使用，等等吧第三方的 openwrt 已经在路上了）
+使用这里提供的降级固件，在后台常用设置-系统状态里-手动选择下载好的固件，降级后再解锁 SSH。降级后第一次进入后台配置的时候请选择不自动更新，或者手机小米Wi-Fi App 里关闭系统更新。（目前的系统虽然不是最新的也能够 Mesh 不影响使用，等等吧第三方的 openwrt 已经在路上了） 
+
 * [小米 AX1800 1.0.336 下载](https://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/rm1800/miwifi_rm1800_firmware_fafda_1.0.336.bin)
 * [红米 AX5 1.0.26 下载](https://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/ra67/miwifi_ra67_all_f3fac_1.0.26.bin)
 
@@ -137,4 +138,4 @@ sh root@192.168.31.1
 
 #### 第三步：主机加速 App
 
-打开App并登录后，手机会把我的AX5认为是OpenWrt路由器的网络，点击下一步操作即可
+打开App并登录后，手机会把我的AX5认为是OpenWrt路由器的网络，点击下一步操作即可 -->
