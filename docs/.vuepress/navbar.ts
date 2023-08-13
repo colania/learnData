@@ -12,7 +12,7 @@ export default navbar([
       {
         text: "工作经验",
         prefix: "",
-        children: ["_post/code-cr.md","_post/promotion-share.md"],
+        children: ["posts/code-cr.md","posts/promotion-share.md"],
       },
       {
         text: "编码",
