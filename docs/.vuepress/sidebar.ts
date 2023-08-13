@@ -5,7 +5,7 @@ export default sidebar([
   "/DailyRoutine",
   "/Fitness",
   // 读书笔记架构更换到 docsify，不能使用相对链接
-  { text: "读书笔记", icon: "read", link: "https://newzone.top/reading/" },
+  { text: "读书笔记", icon: "read", link: "https://colania.github.io/reading/" },
   // 指定显示页面
   {
     text: "🧰 应用手册",
@@ -14,28 +14,18 @@ export default sidebar([
     link: "",
     collapsible: true,
     children: [
-      "Applist.md",
       "ChatGPT.md",
-      "design.md",
       "AppNotes.md",
       "Chrome.md",
-      {
-        text: "直播手册",
-        icon: "load",
-        prefix: "livestreaming/",
-        link: "",
-        collapsible: true,
-        children: "structure",
-      },
+      // {
+      //   text: "直播手册",
+      //   icon: "load",
+      //   prefix: "livestreaming/",
+      //   link: "",
+      //   collapsible: true,
+      //   children: "structure",
+      // },
     ],
-  },
-  {
-    text: "🌐 页面开发",
-    icon: "",
-    prefix: "/web/",
-    link: "",
-    collapsible: true,
-    children: "structure",
   },
   {
     text: "🏗️ 网站部署",
@@ -56,7 +46,7 @@ export default sidebar([
     ],
   },
   {
-    text: "🚀 代码学习",
+    text: "🚀 程序人生",
     icon: "",
     prefix: "/code/",
     link: "",
@@ -67,14 +57,8 @@ export default sidebar([
         text: "Basic",
         icon: "emmet",
         collapsible: true,
-        children: ["Markdown.md", "Electron.md", "AutoHotkey.md", "Regex.md"],
-      },
-      {
-        text: "FrondEnd",
-        icon: "app",
-        collapsible: true,
-        children: ["Vue.md", "HTML.md", "JavaScript.md", "Python.md"],
-      },
+        children: ["Markdown.md", "Regex.md"],
+      }
     ],
   },
   {
@@ -88,7 +72,7 @@ export default sidebar([
   {
     text: "🪟 系统问题",
     icon: "",
-    prefix: "/windows/",
+    prefix: "/systems/",
     link: "",
     collapsible: true,
     children: "structure",
