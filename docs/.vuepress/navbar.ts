@@ -12,7 +12,7 @@ export default navbar([
       {
         text: "工作经验",
         prefix: "",
-
+        children: [],
       },
       {
         text: "编码",
