@@ -14,7 +14,9 @@ icon: note
 
 更重要的是，**笔记里的知识并不属于你，只有经过消化、应用，才会成为自己的知识。**
 
-因此，我基于 VuePress 和 vuepress-theme-hope 建立了 LearnData，将所有笔记与文章重新整合，聚合到同一页面形成知识库，方便自己使用和分享。
+后来，我发现了 LearnData，这是一个相当不错的开源的知识库项目。可以将所有笔记与文章重新整合，聚合到同一页面形成知识库，方便自己使用和分享。
+
+因此我打算保留这个页面，让更多的人去了解和使用LearnData。感谢[作者@rockbenben](https://github.com/rockbenben)。
 
 ![](https://img.newzone.top/2022-08-22-19-28-25.png?imageMogr2/thumbnail/600x "笔记 + 文章 = LearnData 知识库")
 
