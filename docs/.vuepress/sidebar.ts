@@ -33,14 +33,6 @@ export default sidebar([
       "ChatGPT.md",
       "AppNotes.md",
       "Chrome.md",
-      // {
-      //   text: "直播手册",
-      //   icon: "load",
-      //   prefix: "livestreaming/",
-      //   link: "",
-      //   collapsible: true,
-      //   children: "structure",
-      // },
     ],
   },
   {
@@ -86,11 +78,9 @@ export default sidebar([
     children: [
       {
         text: "工作英语",
-        icon: "load",
-        prefix: "/work",
-        link: "",
+        icon: "emmet",
         collapsible: true,
-        children: "structure",
+        children: ["work/meetingEnglish.md"],
       },
     ],
   },
