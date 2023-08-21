@@ -8,6 +8,22 @@ export default sidebar([
   { text: "读书笔记", icon: "read", link: "https://colania.github.io/reading/" },
   // 指定显示页面
   {
+    text: "🚀 程序人生",
+    icon: "",
+    prefix: "/code/",
+    link: "",
+    collapsible: true,
+    children: [
+      "README.md",
+      {
+        text: "Basic",
+        icon: "emmet",
+        collapsible: true,
+        children: ["Markdown.md", "Regex.md"],
+      }
+    ],
+  },
+  {
     text: "🧰 应用手册",
     icon: "",
     prefix: "/apps/",
@@ -28,7 +44,7 @@ export default sidebar([
     ],
   },
   {
-    text: "🏗️ 网站部署",
+    text: "🏗️ 运维部署",
     icon: "",
     prefix: "/deploy/",
     link: "",
@@ -44,30 +60,6 @@ export default sidebar([
         children: ["GitHub.md", "Cloudflare.md", "MySQL.md", "DNS.md"],
       },
     ],
-  },
-  {
-    text: "🚀 程序人生",
-    icon: "",
-    prefix: "/code/",
-    link: "",
-    collapsible: true,
-    children: [
-      "README.md",
-      {
-        text: "Basic",
-        icon: "emmet",
-        collapsible: true,
-        children: ["Markdown.md", "Regex.md"],
-      }
-    ],
-  },
-  {
-    text: "🐋 Linux 服务",
-    icon: "",
-    prefix: "/services/",
-    link: "",
-    collapsible: true,
-    children: "structure",
   },
   {
     text: "🪟 系统问题",
@@ -86,7 +78,32 @@ export default sidebar([
     children: "structure",
   },
   {
-    text: "博客文章",
+    text: "🙈 开口说英语",
+    icon: "",
+    prefix: "/english",
+    link: "",
+    collapsible: true,
+    children: [
+      {
+        text: "工作英语",
+        icon: "load",
+        prefix: "/work",
+        link: "",
+        collapsible: true,
+        children: "structure",
+      },
+    ],
+  },
+  {
+    text: "🏝️ 金融小知识",
+    icon: "",
+    prefix: "/finance",
+    link: "",
+    collapsible: true,
+    children: "structure",
+  },
+  {
+    text: "🥥 博客文章",
     icon: "blog",
     prefix: "/_posts/",
     link: "/blog",
