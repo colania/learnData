@@ -72,7 +72,6 @@ export default sidebar([
   {
     text: "🙈 开口说英语",
     icon: "",
-    prefix: "/english",
     link: "",
     collapsible: true,
     children: [
@@ -80,8 +79,7 @@ export default sidebar([
         text: "工作英语",
         icon: "emmet",
         collapsible: true,
-        prefix: "/work/",
-        children: "structure",
+        children: ["posts/meetingEnglish.md"],
       },
     ],
   },
