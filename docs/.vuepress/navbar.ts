@@ -3,25 +3,12 @@ import { navbar } from "vuepress-theme-hope";
 // 精选图标：https://theme-hope.vuejs.press/zh/guide/interface/icon.html#iconfont-%E7%B2%BE%E9%80%89%E5%9B%BE%E6%A0%87
 export default navbar([
   { text: "博客", icon: "blog", link: "/blog" },
-  // {
-  //   text: "代码",
-  //   icon: "code",
-  //   prefix: "/",
-  //   children: [
-  //     //"code/Markdown",
-  //     {
-  //       text: "工作经验",
-  //       prefix: "",
-  //       children: ["posts/code-cr.md","posts/promotion-share.md"],
-  //     },
-  //     {
-  //       text: "编码",
-  //       icon: "vue",
-  //       prefix: "",
-  //       children: ["code/Markdown.md", "code/Regex.md"],
-  //     },
-  //   ],
-  // },
+  {
+    text: "随心记",
+    icon: "code",
+    prefix: "/daily",
+    children: [""],
+  },
   // {
   //   text: "应用",
   //   icon: "app",
