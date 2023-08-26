@@ -6,8 +6,22 @@ export default navbar([
   {
     text: "随心记",
     icon: "code",
-    prefix: "/daily",
-    children: [""],
+    prefix: "/",
+    children: [
+      "daily/summary",
+      {
+        text: "日记",
+        icon: "any",
+        prefix: "",
+        children: [],
+      },
+      {
+        text: "随笔",
+        icon: "any",
+        prefix: "",
+        children: [],
+      }
+    ],
   },
   // {
   //   text: "应用",
