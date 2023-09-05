@@ -23,43 +23,6 @@ export default navbar([
       }
     ],
   },
-  // {
-  //   text: "应用",
-  //   icon: "app",
-  //   prefix: "/",
-  //   children: [
-  //     // "apps/Applist",
-  //     // {
-  //     //   text: "直播手册",
-  //     //   icon: "quote",
-  //     //   link: "apps/livestreaming/1_obs_basic",
-  //     // },
-  //     {
-  //       text: "服务/系统",
-  //       icon: "any",
-  //       prefix: "",
-  //       children: [],
-  //     },
-  //   ],
-  // },
-  // {
-  //   text: "生活",
-  //   icon: "emmet",
-  //   prefix: "/family/",
-  //   children: [],
-  // },
-  // {
-  //   text: "金融",
-  //   icon: "sspai",
-  //   // icon: "game",
-  //   children: [],
-  // },
-  // {
-  //   text: "英语",
-  //   icon: "quote",
-  //   // icon: "english",
-  //   children: [],
-  // },
   {
     text: "Contact",
     icon: "advance",

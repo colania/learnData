@@ -10,7 +10,7 @@ export default defineUserConfig({
   // 网站语言，默认为中文
   lang: "zh-CN",
   // 网站标题
-  title: "田野放空",
+  title: "田野梦呓",
   // 网站描述
   description:
     "探索、经历、思考、归纳、自我提升，记录并输出一切能让自己提升的知识。",

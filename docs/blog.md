@@ -3,10 +3,10 @@
 home: true
 layout: BlogHome
 icon: home
-title: 田野放空
+title: 田野梦呓
 #heroImage: /logo.svg
-heroText: 田野放空
-tagline: 盛年不重来，一日难再晨
+heroText: 田野梦呓
+tagline: 人生总要有个记录
 bgImage: https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/IMG_1543.JPG
 heroFullScreen: false
 #projects:
