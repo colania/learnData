@@ -13,7 +13,7 @@ export default navbar([
         text: "日记",
         icon: "any",
         prefix: "",
-        children: [],
+        children: ["daily/2023-09-05daily"],
       },
       {
         text: "随笔",

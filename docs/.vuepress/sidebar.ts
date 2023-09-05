@@ -54,9 +54,9 @@ export default sidebar([
     ],
   },
   {
-    text: "🪟 系统问题",
+    text: "🪟 随心记",
     icon: "",
-    prefix: "/systems/",
+    prefix: "/daily/",
     link: "",
     collapsible: true,
     children: "structure",
