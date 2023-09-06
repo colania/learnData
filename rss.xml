@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>探索、经历、思考、归纳、自我提升，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 06 Sep 2023 13:21:36 GMT</pubDate>
-    <lastBuildDate>Wed, 06 Sep 2023 13:21:36 GMT</lastBuildDate>
+    <pubDate>Wed, 06 Sep 2023 13:29:14 GMT</pubDate>
+    <lastBuildDate>Wed, 06 Sep 2023 13:29:14 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工作英语</category>
@@ -20,7 +20,21 @@
       <link>https://newzone.top/code/deploy/</link>
       <guid>https://newzone.top/code/deploy/</guid>
       <source url="https://newzone.top/rss.xml">部署方式</source>
+      <description>目录 Cloudflare 云计算服务 DNS</description>
       <pubDate>Wed, 06 Sep 2023 13:08:38 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 目录</h2>
+<ul>
+<li>
+<p><a href="/code/deploy/Cloudflare.html" target="blank">Cloudflare</a></p>
+</li>
+<li>
+<p><a href="/code/deploy/CloudServices.html" target="blank">云计算服务</a></p>
+</li>
+<li>
+<p><a href="/code/deploy/DNS.html" target="blank">DNS</a></p>
+</li>
+</ul>
+]]></content:encoded>
     </item>
     <item>
       <title>服务</title>
