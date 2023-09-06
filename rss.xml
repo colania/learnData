@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>探索、经历、思考、归纳、自我提升，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 06 Sep 2023 09:47:30 GMT</pubDate>
-    <lastBuildDate>Wed, 06 Sep 2023 09:47:30 GMT</lastBuildDate>
+    <pubDate>Wed, 06 Sep 2023 09:49:40 GMT</pubDate>
+    <lastBuildDate>Wed, 06 Sep 2023 09:49:40 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工作英语</category>
@@ -123,10 +123,12 @@ eg. As you all may know , we are switching office locations next month.</p>
       <link>https://newzone.top/posts/AI-tools.html</link>
       <guid>https://newzone.top/posts/AI-tools.html</guid>
       <source url="https://newzone.top/rss.xml">AI工具介绍</source>
-      <description>AI工具介绍 随着当前网络数据量的爆发，基于大数据的AI，现在越来越智能了。尤其是chatgpt的推出，AI使用越来越广泛。 本文主要介绍当前广泛使用的AI工具。 chatGPT ChatGPT是一种基于Transformer架构的深度学习模型，可以对语言进行建模和生成。它可以处理问答、对话生成、文本生成等多种任务，可以认为是当前最为智能的AI工具。甚至有人将其称为新时代的奠基者，我们将从互联网时代进入AI时代。 当前chatGPT有两种使用方法： 通过官网使用。 通过chatGPT - API 使用</description>
+      <description>AI工具</description>
       <category>行业追踪</category>
       <pubDate>Sat, 18 Mar 2023 11:20:09 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> AI工具介绍</h1>
+      <content:encoded><![CDATA[<p>AI工具</p>
+<!-- more -->
+<h1> AI工具介绍</h1>
 <p>随着当前网络数据量的爆发，基于大数据的AI，现在越来越智能了。尤其是chatgpt的推出，AI使用越来越广泛。</p>
 <p>本文主要介绍当前广泛使用的AI工具。</p>
 <h2> chatGPT</h2>
