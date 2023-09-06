@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>探索、经历、思考、归纳、自我提升，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 06 Sep 2023 09:49:40 GMT</pubDate>
-    <lastBuildDate>Wed, 06 Sep 2023 09:49:40 GMT</lastBuildDate>
+    <pubDate>Wed, 06 Sep 2023 09:58:11 GMT</pubDate>
+    <lastBuildDate>Wed, 06 Sep 2023 09:58:11 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工作英语</category>
@@ -123,10 +123,11 @@ eg. As you all may know , we are switching office locations next month.</p>
       <link>https://newzone.top/posts/AI-tools.html</link>
       <guid>https://newzone.top/posts/AI-tools.html</guid>
       <source url="https://newzone.top/rss.xml">AI工具介绍</source>
-      <description>AI工具</description>
+      <description>随着当前网络数据量的爆发，基于大数据的AI，现在越来越智能了。尤其是chatgpt的推出，AI使用越来越广泛。 本文主要介绍当前广泛使用的AI工具。</description>
       <category>行业追踪</category>
       <pubDate>Sat, 18 Mar 2023 11:20:09 GMT</pubDate>
-      <content:encoded><![CDATA[<p>AI工具</p>
+      <content:encoded><![CDATA[<p>随着当前网络数据量的爆发，基于大数据的AI，现在越来越智能了。尤其是chatgpt的推出，AI使用越来越广泛。</p>
+<p>本文主要介绍当前广泛使用的AI工具。</p>
 <!-- more -->
 <h1> AI工具介绍</h1>
 <p>随着当前网络数据量的爆发，基于大数据的AI，现在越来越智能了。尤其是chatgpt的推出，AI使用越来越广泛。</p>
@@ -206,10 +207,12 @@ eg. As you all may know , we are switching office locations next month.</p>
       <link>https://newzone.top/posts/ConcurrentHashMap-analyse.html</link>
       <guid>https://newzone.top/posts/ConcurrentHashMap-analyse.html</guid>
       <source url="https://newzone.top/rss.xml">ConcurrentHashMap 源码分析</source>
-      <description>ConcurrentHashMap类图 image-20230321163458604 根据类图看出来，ConcurrentHashMap实现了 Map 接口，继承了 AbstractMap 抽象类，所以大多数的方法也都和我们平时用到的HashMap是相同的，HashMap 有的方法，ConcurrentHashMap 几乎都有，所以当我们需要从 HashMap 切换到 ConcurrentHashMap 时，无需关心两者之间的兼容问题。</description>
+      <description>ConcurrentHashMap源码分析</description>
       <category>coding</category>
       <pubDate>Sat, 18 Mar 2023 11:29:10 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> ConcurrentHashMap类图</h2>
+      <content:encoded><![CDATA[<p>ConcurrentHashMap源码分析</p>
+<!-- more -->
+<h2> ConcurrentHashMap类图</h2>
 <figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230321163458604.png" alt="image-20230321163458604" tabindex="0" loading="lazy"><figcaption>image-20230321163458604</figcaption></figure>
 <p>根据类图看出来，ConcurrentHashMap实现了 Map 接口，继承了 AbstractMap 抽象类，所以大多数的方法也都和我们平时用到的HashMap是相同的，HashMap 有的方法，ConcurrentHashMap 几乎都有，所以当我们需要从 HashMap 切换到 ConcurrentHashMap 时，无需关心两者之间的兼容问题。</p>
 <h2> <strong>ConcurrentHashMap几个重要概念</strong></h2>
@@ -1169,10 +1172,12 @@ Java SPI就是提供这样的一个机制：为某个接口寻找服务实现的
       <link>https://newzone.top/posts/chatGPT.html</link>
       <guid>https://newzone.top/posts/chatGPT.html</guid>
       <source url="https://newzone.top/rss.xml">chatGPT.md</source>
-      <description>chatGPT prompt 工程 什么是 Prompt 工程？ Prompt 工程是创建提示或指导像 ChatGPT 这样的语言模型输出的过程。它允许用户控制模型的输出并生成符合其特定需求的文本。 ChatGPT 是一种先进的语言模型，能够生成类似于人类的文本。它建立在 Transformer 架构上，可以处 理大量数据并生成高质量的文本。 然而，为了从 ChatGPT 中获得最佳结果，重要的是要了解如何正确地提示模型。 提示可以让用户控制 模型的输出并生成相关、准确和高质量的文本。 在使用 ChatGPT 时，了解它的能力和限制非常重要。 该模型能够生成类似于人类的文本，但如果没有适当的指导，它可能无法始终产生期望的输出。 这就是 Prompt 工程的作用，通过提供清晰而具体的指令，您可以引导模型的输出并确保其相关。 Prompt 公式是提示的特定格式，通常由三个主要元素组成：</description>
+      <description>Prompt工程是一个过程，用于创建提示或指导，以控制像ChatGPT这样的语言模型的输出，生成符合特定需求的文本。ChatGPT是一种先进的语言模型，能生成类似人类的文本，但需要适当的指导以产生期望的输出。Prompt工程的作用就是提供这种指导。Prompt公式是一种特定格式的提示，主要由任务（清晰简洁地陈述模型应生成的内容）、指令（模型在生成文本时应遵循的指令）、角色（模型在生成文本时应扮演的角色）三个元素组成。</description>
       <category>行业追踪</category>
       <pubDate>Sun, 04 Jun 2023 23:09:24 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> chatGPT prompt 工程</h1>
+      <content:encoded><![CDATA[<p>Prompt工程是一个过程，用于创建提示或指导，以控制像ChatGPT这样的语言模型的输出，生成符合特定需求的文本。ChatGPT是一种先进的语言模型，能生成类似人类的文本，但需要适当的指导以产生期望的输出。Prompt工程的作用就是提供这种指导。Prompt公式是一种特定格式的提示，主要由任务（清晰简洁地陈述模型应生成的内容）、指令（模型在生成文本时应遵循的指令）、角色（模型在生成文本时应扮演的角色）三个元素组成。</p>
+<!-- more -->
+<h1> chatGPT prompt 工程</h1>
 <p>什么是 Prompt 工程？ Prompt 工程是创建提示或指导像 ChatGPT 这样的语言模型输出的过程。它允许用户控制模型的输出并生成符合其特定需求的文本。 ChatGPT 是一种先进的语言模型，能够生成类似于人类的文本。它建立在 Transformer 架构上，可以处 理大量数据并生成高质量的文本。 然而，为了从 ChatGPT 中获得最佳结果，重要的是要了解如何正确地提示模型。 提示可以让用户控制 模型的输出并生成相关、准确和高质量的文本。 在使用 ChatGPT 时，了解它的能力和限制非常重要。 该模型能够生成类似于人类的文本，但如果没有适当的指导，它可能无法始终产生期望的输出。 这就是 Prompt 工程的作用，通过提供清晰而具体的指令，您可以引导模型的输出并确保其相关。 <strong>Prompt 公式是提示的特定格式，通常由三个主要元素组成：</strong></p>
 <ul>
 <li>任务：对提示要求模型生成的内容进行清晰而简洁的陈述。</li>
@@ -1633,10 +1638,12 @@ Java SPI就是提供这样的一个机制：为某个接口寻找服务实现的
       <link>https://newzone.top/posts/code-cr.html</link>
       <guid>https://newzone.top/posts/code-cr.html</guid>
       <source url="https://newzone.top/rss.xml">代码CR模板</source>
-      <description>代码CR模板 基础篇 编码风格遵循阿里巴巴Java开发手册 大型复杂流程程序必须提供流程图、时序图 被cr同学在cr开始需简单叙述项目大小及其背景，复杂流程需要cr实现逻辑是否match技术方案，减少实现跟技术方案的gap 业务逻辑划分是否合理,是否耦合 业务逻辑涉及领域的逻辑，明显或耦合的业务逻辑建议拆分 代码编码逻辑是否清晰 被cr同学需要讲清楚主干逻辑 合理有效的注释 逻辑复杂的代码或cr有疑问的逻辑,要求补充合理有效的注释 是否存在冗余代码 多余或者没有引用的代码建议删除 是否存在潜在NPE NPE是日常工作必出现的bug 上下文字段使用不判空，getXX()操作，基本类型拆箱，需要防御式判断或Optional 日志打印规范 强制使用占位符进行日志打印，因为字符串拼接会使用 StringBuilder 的 append() 方式,有一定的性能损耗 logger.info(&amp;quot;are u ok : oid 1&amp;quot;, oid); logger.info(&amp;quot;are u ok : oid 1&amp;quot;, oid); 有没有maven依赖冲突 很多时候诡异的运行时bug，往往由于依赖冲突导致，cr建议确认是否有pom变更 资源释放 无论是网络io还是文件io、资源释放的逻辑需要被cr到 统一错误码 禁止统一返回-1、500等错误码，最好定义枚举，方便追溯问题 异常的处理 出现异常的地方需要确认是否需要进行一下操作：直接返回、抛出异常、重试处理、恢复处理、熔断处理、降级处理、关闭业务</description>
+      <description>代码CR模板</description>
       <category>工作心得</category>
       <pubDate>Sun, 02 Apr 2023 00:34:27 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 代码CR模板</h1>
+      <content:encoded><![CDATA[<p>代码CR模板</p>
+<!-- more -->
+<h1> 代码CR模板</h1>
 <h2> 基础篇</h2>
 <ol>
 <li>
