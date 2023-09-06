@@ -8,18 +8,32 @@ export default sidebar([
   { text: "读书笔记", icon: "read", link: "https://colania.github.io/reading/" },
   // 指定显示页面
   {
-    text: "🚀 程序人生",
-    icon: "",
-    prefix: "/code/",
+    text: "程序人生",
+    prefix: "/",
     link: "",
     collapsible: true,
     children: [
-      "README.md",
       {
-        text: "Basic",
-        icon: "emmet",
+        text: "语言",
+        prefix: "/code/",
         collapsible: true,
         children: ["Markdown.md", "Regex.md"],
+      },
+      {
+        text: "运维部署",
+        prefix: "/deploy/",
+        collapsible: true,
+        children: [
+          "Static.md",
+          "CloudServices.md",
+          "VPS.md",
+          {
+            text: "部署工具",
+            icon: "emmet",
+            collapsible: true,
+            children: ["GitHub.md", "Cloudflare.md", "MySQL.md", "DNS.md"],
+          },
+        ],
       }
     ],
   },
@@ -33,24 +47,6 @@ export default sidebar([
       "ChatGPT.md",
       "AppNotes.md",
       "Chrome.md",
-    ],
-  },
-  {
-    text: "🏗️ 运维部署",
-    icon: "",
-    prefix: "/deploy/",
-    link: "",
-    collapsible: true,
-    children: [
-      "Static.md",
-      "CloudServices.md",
-      "VPS.md",
-      {
-        text: "部署工具",
-        icon: "emmet",
-        collapsible: true,
-        children: ["GitHub.md", "Cloudflare.md", "MySQL.md", "DNS.md"],
-      },
     ],
   },
   {
@@ -91,12 +87,12 @@ export default sidebar([
     collapsible: true,
     children: "structure",
   },
-  {
-    text: "🥥 博客文章",
-    icon: "blog",
-    prefix: "/_posts/",
-    link: "/blog",
-    collapsible: true,
-    children: "structure",
-  },
+  // {
+  //   text: "🥥 博客文章",
+  //   icon: "blog",
+  //   prefix: "/_posts/",
+  //   link: "/blog",
+  //   collapsible: true,
+  //   children: "structure",
+  // },
 ]);
