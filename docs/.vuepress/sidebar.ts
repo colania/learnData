@@ -17,7 +17,7 @@ export default sidebar([
         text: "语言",
         prefix: "/code/",
         collapsible: true,
-        children: "structure",
+        children: ["Markdown.md", "Regex.md"],
       },
       {
         text: "运维部署",
