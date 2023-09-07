@@ -60,7 +60,7 @@ export default sidebar([
         link: "",
         collapsible: true,
         prefix: "work",
-        children:["meetingEnglish.md"],
+        children:["meeting.md"],
       },{
         text: "生活英语",
         link: "",
