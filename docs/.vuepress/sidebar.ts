@@ -8,27 +8,26 @@ export default sidebar([
   { text: "读书笔记",  link: "https://colania.github.io/reading/" },
   {
     text: "随心记",
-    prefix: "/posts/daily/",
+    prefix: "/daily/",
     link: "",
     collapsible: true,
     children:"structure",
   },
   {
     text: "程序人生",
-    prefix: "/",
-    link: "",
+    prefix: "/code",
     collapsible: true,
     children: [
       {
-        text: "工作思考",
-        link: "",
+        text: "语言",
         collapsible: true,
-        children:[],
+        prefix: "language",
+        children:["Markdown.md","Regex.md"],
       },{
         text: "编码",
         link: "",
         collapsible: true,
-        children:[],
+        children:["/services/Docker"],
       }
     ],
   },
