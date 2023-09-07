@@ -5,13 +5,13 @@ export default sidebar([
   "/DailyRoutine",
   // "/Fitness",
   // 读书笔记架构更换到 docsify，不能使用相对链接
-  { text: "读书笔记",  link: "https://colania.github.io/reading/" },
+  { text: "读书笔记", link: "https://colania.github.io/reading/" },
   {
     text: "随心记",
     prefix: "/daily/",
     link: "",
     collapsible: true,
-    children:"structure",
+    children: "structure",
   },
   {
     text: "程序人生",
@@ -22,13 +22,13 @@ export default sidebar([
         text: "语言",
         collapsible: true,
         prefix: "language",
-        children:["Markdown.md","Regex.md"],
-      },{
+        children: ["Markdown.md", "Regex.md"],
+      }, {
         text: "编码",
         link: "",
         collapsible: true,
         prefix: "services",
-        children:["Docker.md"],
+        children: ["Docker.md"],
       }
     ],
   },
@@ -42,7 +42,7 @@ export default sidebar([
       "Chrome.md",
     ],
   },
-  
+
   {
     text: "生活记录",
     prefix: "/life/",
@@ -52,41 +52,20 @@ export default sidebar([
   },
   {
     text: "开口说英语",
-    link: "/english",
+    prefix: "/english/",
     collapsible: true,
     children: [
       {
         text: "工作英语",
-        link: "",
         collapsible: true,
         prefix: "work",
-        children:["meeting.md"],
-      },{
+        children: ["meeting.md"],
+      }, {
         text: "生活英语",
         link: "",
         collapsible: true,
         prefix: "life",
-        children:[],
-      }
-    ],
-  },
-
- {
-    text: "程序人生",
-    prefix: "/code",
-    collapsible: true,
-    children: [
-      {
-        text: "语言",
-        collapsible: true,
-        prefix: "language",
-        children:["Markdown.md","Regex.md"],
-      },{
-        text: "编码",
-        link: "",
-        collapsible: true,
-        prefix: "services",
-        children:["Docker.md"],
+        children: [],
       }
     ],
   },
