@@ -1,7 +1,6 @@
 ---
 article: false
 title: 维修/保养
-icon: repair
 order: 5
 ---
 

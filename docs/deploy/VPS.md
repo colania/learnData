@@ -1,7 +1,6 @@
 ---
 article: false
 title: 服务器 VPS
-icon: IO
 order: 3
 ---
 

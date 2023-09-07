@@ -1,7 +1,6 @@
 ---
 article: false
 title: 医疗药品
-icon: like
 order: 4
 ---
 

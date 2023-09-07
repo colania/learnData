@@ -35,7 +35,6 @@ export default sidebar([
   {
     text: "应用手册",
     prefix: "/apps/",
-    link: "",
     collapsible: true,
     children: [
       "ChatGPT.md",
@@ -53,13 +52,13 @@ export default sidebar([
   },
   {
     text: "开口说英语",
-    link: "",
+    link: "/english",
     collapsible: true,
     children: [
       {
         text: "工作英语",
-        collapsible: true,
-        children: ["posts/meetingEnglish.md"],
+        prefix: "work",
+        children: ["meetingEnglish.md"],
       },
     ],
   },

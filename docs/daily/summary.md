@@ -1,7 +1,6 @@
 ---
 article: true
 title: 随心记开坑
-icon: proxy
 order: 1
 ---
 # 随心记开坑

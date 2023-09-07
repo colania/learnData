@@ -1,7 +1,6 @@
 ---
 article: false
 title: 智能家居
-icon: home
 order: 3.1
 ---
 

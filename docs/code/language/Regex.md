@@ -1,5 +1,5 @@
 ---
-article: true
+article: false
 title: 正则表达式
 order: 6
 ---

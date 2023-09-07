@@ -7,16 +7,15 @@ export default navbar([
   { text: "随心记", link: "/daily/summary" },
   {
     text: "Contact",
-    icon: "advance",
     children: [
       {
         text: "微信",
         icon: "wechat",
-        link: "https://img.newzone.top/wechat.svg",
+        link: "https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/img_v2_b8c05931-1e32-4e49-a224-103b7b48cddg.jpg",
       },
-      { text: "Email", icon: "alias", link: "mailto:wweiooogo@gmail.com" },
-      { text: "Discord", icon: "group", link: "https://discord.gg/PZTQfJ4GjX" },
-      { text: "RSS", icon: "rss", link: "https://newzone.top/rss.xml" },
+      { text: "Email", link: "mailto:wweiooogo@gmail.com" },
+      { text: "Discord", link: "https://discord.gg/PZTQfJ4GjX" },
+      // { text: "RSS",  link: "https://newzone.top/rss.xml" },
     ],
   },
 ]);

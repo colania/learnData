@@ -1,7 +1,6 @@
 ---
 article: false
 title: Cloudflare
-icon: proxy
 order: 5
 ---
 

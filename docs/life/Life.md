@@ -1,7 +1,6 @@
 ---
 article: false
 title: 生活窍门
-icon: creative
 order: 6
 ---
 

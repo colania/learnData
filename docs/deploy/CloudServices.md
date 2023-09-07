@@ -1,7 +1,6 @@
 ---
 article: false
 title: 云计算服务
-icon: class
 order: 2
 ---
 

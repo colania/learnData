@@ -1,7 +1,6 @@
 ---
 article: false
 title: 健康饮食
-icon: enum
 order: 1
 ---
 
