@@ -70,6 +70,27 @@ export default sidebar([
       }
     ],
   },
+
+ {
+    text: "程序人生",
+    prefix: "/code",
+    collapsible: true,
+    children: [
+      {
+        text: "语言",
+        collapsible: true,
+        prefix: "language",
+        children:["Markdown.md","Regex.md"],
+      },{
+        text: "编码",
+        link: "",
+        collapsible: true,
+        prefix: "services",
+        children:["Docker.md"],
+      }
+    ],
+  },
+
   {
     text: "金融小知识",
     prefix: "/finance",
