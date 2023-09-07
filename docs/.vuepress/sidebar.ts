@@ -9,7 +9,7 @@ export default sidebar([
   // 指定显示页面
   {
     text: "程序人生",
-    prefix: "/",
+    prefix: "/code",
     link: "",
     collapsible: true,
     children: "structure",
