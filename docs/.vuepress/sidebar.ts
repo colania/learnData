@@ -17,7 +17,7 @@ export default sidebar([
         text: "语言",
         prefix: "/code/",
         collapsible: true,
-        children: ["Markdown.md", "Regex.md"],
+        children: "structure",
       },
       {
         text: "运维部署",
@@ -60,7 +60,7 @@ export default sidebar([
   {
     text: "🛖 生活记录",
     icon: "",
-    prefix: "/family/",
+    prefix: "/life/",
     link: "",
     collapsible: true,
     children: "structure",
