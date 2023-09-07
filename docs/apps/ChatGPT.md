@@ -1,5 +1,5 @@
 ---
-article: false
+article: true
 title: ChatGPT
 icon: creative
 order: 2

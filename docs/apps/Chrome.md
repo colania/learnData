@@ -1,5 +1,5 @@
 ---
-article: false
+article: true
 title: Chrome 扩展
 icon: chrome
 order: 5
