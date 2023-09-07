@@ -21,13 +21,13 @@ export default sidebar([
       {
         text: "语言",
         collapsible: true,
-        prefix: "/language",
+        prefix: "language",
         children:["Markdown.md","Regex.md"],
       },{
         text: "编码",
         link: "",
         collapsible: true,
-        prefix: "/services",
+        prefix: "services",
         children:["Docker.md"],
       }
     ],
