@@ -12,30 +12,31 @@ export default sidebar([
     prefix: "/",
     link: "",
     collapsible: true,
-    children: [
-      {
-        text: "语言",
-        prefix: "/code/",
-        collapsible: true,
-        children: ["Markdown.md", "Regex.md"],
-      },
-      {
-        text: "运维部署",
-        prefix: "/deploy/",
-        collapsible: true,
-        children: [
-          "Static.md",
-          "CloudServices.md",
-          "VPS.md",
-          {
-            text: "部署工具",
-            icon: "emmet",
-            collapsible: true,
-            children: ["GitHub.md", "Cloudflare.md", "MySQL.md", "DNS.md"],
-          },
-        ],
-      }
-    ],
+    children: "structure",
+    // children: [
+    //   {
+    //     text: "语言",
+    //     prefix: "/code/",
+    //     collapsible: true,
+    //     children: ["Markdown.md", "Regex.md"],
+    //   },
+    //   {
+    //     text: "运维部署",
+    //     prefix: "/deploy/",
+    //     collapsible: true,
+    //     children: [
+    //       "Static.md",
+    //       "CloudServices.md",
+    //       "VPS.md",
+    //       {
+    //         text: "部署工具",
+    //         icon: "emmet",
+    //         collapsible: true,
+    //         children: ["GitHub.md", "Cloudflare.md", "MySQL.md", "DNS.md"],
+    //       },
+    //     ],
+    //   }
+    // ],
   },
   {
     text: "🧰 应用手册",

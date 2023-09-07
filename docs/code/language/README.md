@@ -1,6 +1,6 @@
 ---
 article: false
-title: 代码
+title: 语言
 icon: regexp
 dir:
   order: 1
