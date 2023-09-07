@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>探索、经历、思考、归纳、自我提升，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 07 Sep 2023 02:47:42 GMT</pubDate>
-    <lastBuildDate>Thu, 07 Sep 2023 02:47:42 GMT</lastBuildDate>
+    <pubDate>Thu, 07 Sep 2023 05:40:59 GMT</pubDate>
+    <lastBuildDate>Thu, 07 Sep 2023 05:40:59 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工作英语</category>
@@ -15,6 +15,40 @@
     <category>coding</category>
     <category>java</category>
     <category>生活</category>
+    <item>
+      <title>2023-09-05日记</title>
+      <link>https://newzone.top/daily/2023-09-05.html</link>
+      <guid>https://newzone.top/daily/2023-09-05.html</guid>
+      <source url="https://newzone.top/rss.xml">2023-09-05日记</source>
+      <description>2023-09-05记 今天是随心记的第一次落笔，虽然开了坑，但是最近事情比较多（都是借口）。更真实的是，自己没有记日记的习惯，心里总是想着这件事，但是emm，不能落到实处。 今天负责的项目上线，4点多以后事情就比较少了。突然想起这件事情来，抽空放松一下。 工作 1. 这两周负责把控当前项目进度，俗称owner。我一直在思考为什么互联网公司逐渐淡化“项目经理”的角色，而更倾向于让每个人都有可能成为项目经理。我在之前的公司，项目经理是需要专业资格认证的。我现在的任务包括入职培训、开发和项目管理，有时我会感到困惑，为什么这些事情总是一起涌来。其实，我认为我应该能够同时处理开发和项目管理，但入职培训的通知提前三四天就来了，接着我连续三天都在全身心投入入职培训，然后每天晚上还要继续工作。这确实有些累人。但这也是我第一次作为项目负责人，也是我在这家公司的第一次正式上线。我从这次经历中学习到了很多，也了解了很多流程。我明白了，应该预留一两天的时间来应对风险，以防有同事突然有事影响项目进度。 2. 现在在这家公司，做事感觉很乱，但是貌似又有一些章法。感觉就是，这里打一枪，效果不好，然后马上换个地方再打一枪。 然后研发部门的老大还要要求每个月去复盘一次，看看你当前做的事情有没有价值，然后又要基于每个月做事的价值去考核你的绩效。emmm， 这谁还愿意做长周期的事情，每个月写一个小工具，绩效杠杠的。 3. 当我和同事一起开发项目的时候，我深感互联网大厂的同事更加靠谱。他们能做到很多事情都不需要我亲自操心，而且设计和开发都能达到预期效果。而我现在的同事，虽然他们似乎什么都懂一些，但实际操作起来，却常常给人眼高手低的感觉。比如说，他们在 MySQL 表上增加索引，结果却没有按预期执行。不过他们的协调能力很强，我需要从他们身上学习。</description>
+      <pubDate>Thu, 07 Sep 2023 05:36:53 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 2023-09-05记</h1>
+<p>今天是随心记的第一次落笔，虽然开了坑，但是最近事情比较多（都是借口）。更真实的是，自己没有记日记的习惯，心里总是想着这件事，但是emm，不能落到实处。<br>
+今天负责的项目上线，4点多以后事情就比较少了。突然想起这件事情来，抽空放松一下。</p>
+<h2> 工作</h2>
+
+<h2> 生活</h2>
+<ol>
+<li>锻炼。 自从开了随心记以后，就开始锻炼身体，本想每天能够记录一下自己锻炼的历程，结果没落笔，但是每天坚持锻炼了，也算一个比较漂亮的开端。 前一段时间跑几百米就需要歇一下，现在能跑三公里不歇脚了。嗯，很大的进步。争取做到一口气跑五公里。 <strong>一定要注意运动完的拉伸运动，多用筋膜枪敲一敲肌肉！！</strong></li>
+</ol>
+<blockquote>
+<p>谈到筋膜枪，感觉是今年买的比较值的东西了。之前体验过小一点的筋膜枪，感觉就是在挠痒痒，屁用没有。 偶然有一次在小米店里体验到了专业级的筋膜枪，敲起来真舒服，回家纠结了两天，还是入手了。现在基本上天天都在用，爽哦。</p>
+</blockquote>
+<ol start="2">
+<li>
+<p>长期精力减退。 感觉有很长时间了，做爱提不起兴趣，游戏提不起兴趣，出去玩也提不起兴趣，之前坚持过的读书、看学习视频也提不起兴趣。印象最深的就是，突然想玩大表哥2，游戏买了，120g下了，还没打开图标，就泄了。。。花了大几十和几个小时的时间，卸载不到5分钟。感觉整个人都很矛盾，能坚持锻炼，却不能用大块时间来做自己想做的时间。这算是心理阳痿了吧。。。。</p>
+</li>
+<li>
+<p>上周五女朋友被工作压垮了，回家以后抱着痛哭，在坚持了2个月的007以后终于提辞职了（工资也很低），说实话我都搞不懂她为啥能坚持这么久，实在是太坚强了。做的是插画售课，简单来说就是运营各个平台，吸引来粉丝以后卖插画课。一周视频自己拍+剪、直播的图也得画，每天早上醒来就在看数据，一直忙到晚上直播结束，基本上这一天也就过去了。心疼。。</p>
+</li>
+<li>
+<p>坚持学英语也有几个月了，但是感觉效果不太明显，之前一直在背单词，最近调整了一下策略，多去学习生活、工作中的常用语和口语，努力提高自己的spoken English。</p>
+</li>
+</ol>
+<p>一旦开始写就停不下来了，感觉有好多事情可以写。。。算了，阳痿了，不想写了。。。丢一张图作为结束吧，是我最喜欢的镰鼬。<br>
+</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>Markdown</title>
       <link>https://newzone.top/code/language/Markdown.html</link>
@@ -198,37 +232,46 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>2023-09-05日记</title>
-      <link>https://newzone.top/daily/2023-09-05daily.html</link>
-      <guid>https://newzone.top/daily/2023-09-05daily.html</guid>
-      <source url="https://newzone.top/rss.xml">2023-09-05日记</source>
-      <description>2023-09-05记 今天是随心记的第一次落笔，虽然开了坑，但是最近事情比较多（都是借口）。更真实的是，自己没有记日记的习惯，心里总是想着这件事，但是emm，不能落到实处。 今天负责的项目上线，4点多以后事情就比较少了。突然想起这件事情来，抽空放松一下。 工作 1. 这两周负责把控当前项目进度，俗称owner。我一直在思考为什么互联网公司逐渐淡化“项目经理”的角色，而更倾向于让每个人都有可能成为项目经理。我在之前的公司，项目经理是需要专业资格认证的。我现在的任务包括入职培训、开发和项目管理，有时我会感到困惑，为什么这些事情总是一起涌来。其实，我认为我应该能够同时处理开发和项目管理，但入职培训的通知提前三四天就来了，接着我连续三天都在全身心投入入职培训，然后每天晚上还要继续工作。这确实有些累人。但这也是我第一次作为项目负责人，也是我在这家公司的第一次正式上线。我从这次经历中学习到了很多，也了解了很多流程。我明白了，应该预留一两天的时间来应对风险，以防有同事突然有事影响项目进度。 2. 现在在这家公司，做事感觉很乱，但是貌似又有一些章法。感觉就是，这里打一枪，效果不好，然后马上换个地方再打一枪。 然后研发部门的老大还要要求每个月去复盘一次，看看你当前做的事情有没有价值，然后又要基于每个月做事的价值去考核你的绩效。emmm， 这谁还愿意做长周期的事情，每个月写一个小工具，绩效杠杠的。 3. 当我和同事一起开发项目的时候，我深感互联网大厂的同事更加靠谱。他们能做到很多事情都不需要我亲自操心，而且设计和开发都能达到预期效果。而我现在的同事，虽然他们似乎什么都懂一些，但实际操作起来，却常常给人眼高手低的感觉。比如说，他们在 MySQL 表上增加索引，结果却没有按预期执行。不过他们的协调能力很强，我需要从他们身上学习。</description>
-      <pubDate>Tue, 05 Sep 2023 09:54:25 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 2023-09-05记</h1>
-<p>今天是随心记的第一次落笔，虽然开了坑，但是最近事情比较多（都是借口）。更真实的是，自己没有记日记的习惯，心里总是想着这件事，但是emm，不能落到实处。<br>
-今天负责的项目上线，4点多以后事情就比较少了。突然想起这件事情来，抽空放松一下。</p>
-<h2> 工作</h2>
-
-<h2> 生活</h2>
-<ol>
-<li>锻炼。 自从开了随心记以后，就开始锻炼身体，本想每天能够记录一下自己锻炼的历程，结果没落笔，但是每天坚持锻炼了，也算一个比较漂亮的开端。 前一段时间跑几百米就需要歇一下，现在能跑三公里不歇脚了。嗯，很大的进步。争取做到一口气跑五公里。 <strong>一定要注意运动完的拉伸运动，多用筋膜枪敲一敲肌肉！！</strong></li>
-</ol>
-<blockquote>
-<p>谈到筋膜枪，感觉是今年买的比较值的东西了。之前体验过小一点的筋膜枪，感觉就是在挠痒痒，屁用没有。 偶然有一次在小米店里体验到了专业级的筋膜枪，敲起来真舒服，回家纠结了两天，还是入手了。现在基本上天天都在用，爽哦。</p>
-</blockquote>
-<ol start="2">
-<li>
-<p>长期精力减退。 感觉有很长时间了，做爱提不起兴趣，游戏提不起兴趣，出去玩也提不起兴趣，之前坚持过的读书、看学习视频也提不起兴趣。印象最深的就是，突然想玩大表哥2，游戏买了，120g下了，还没打开图标，就泄了。。。花了大几十和几个小时的时间，卸载不到5分钟。感觉整个人都很矛盾，能坚持锻炼，却不能用大块时间来做自己想做的时间。这算是心理阳痿了吧。。。。</p>
-</li>
-<li>
-<p>上周五女朋友被工作压垮了，回家以后抱着痛哭，在坚持了2个月的007以后终于提辞职了（工资也很低），说实话我都搞不懂她为啥能坚持这么久，实在是太坚强了。做的是插画售课，简单来说就是运营各个平台，吸引来粉丝以后卖插画课。一周视频自己拍+剪、直播的图也得画，每天早上醒来就在看数据，一直忙到晚上直播结束，基本上这一天也就过去了。心疼。。</p>
-</li>
-<li>
-<p>坚持学英语也有几个月了，但是感觉效果不太明显，之前一直在背单词，最近调整了一下策略，多去学习生活、工作中的常用语和口语，努力提高自己的spoken English。</p>
-</li>
-</ol>
-<p>一旦开始写就停不下来了，感觉有好多事情可以写。。。算了，阳痿了，不想写了。。。丢一张图作为结束吧，是我最喜欢的镰鼬。<br>
-</p>
+      <title>Docker</title>
+      <link>https://newzone.top/code/services/Docker.html</link>
+      <guid>https://newzone.top/code/services/Docker.html</guid>
+      <source url="https://newzone.top/rss.xml">Docker</source>
+      <description>Docker 是一个开源的应用容器引擎，可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。借助 Docker，您可以与管理应用程序相同的方式来管理基础架构。简单点说，用 Docker 你不懂太多代码知识，直接用其他人的打包容器，小白也可以部署复杂的服务应用。 Compose 是用于定义和运行多容器 Docker 应用程序的工具。通过 Compose，您可以使用 YML 文件来管理多个 Docker 容器，并配置应用程序需要的所有服务。在配置文件中，所有的容器通过 services 来定义，然后使用 docker-compose 脚本来启动，停止和重启应用，和应用中的服务以及所有依赖服务的容器，非常适合组合使用多个容器进行开发的场景。强烈推荐使用 Compose 搭建所有 Docker，流程参考 NAS 上搭建 Docker。</description>
+      <pubDate>Thu, 07 Sep 2023 02:24:20 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Docker 是一个开源的应用容器引擎，可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。借助 Docker，您可以与管理应用程序相同的方式来管理基础架构。简单点说，用 Docker 你不懂太多代码知识，直接用其他人的打包容器，小白也可以部署复杂的服务应用。</p>
+<p>Compose 是用于定义和运行多容器 Docker 应用程序的工具。通过 Compose，您可以使用 YML 文件来管理多个 Docker 容器，并配置应用程序需要的所有服务。在配置文件中，所有的容器通过 services 来定义，然后使用 docker-compose 脚本来启动，停止和重启应用，和应用中的服务以及所有依赖服务的容器，非常适合组合使用多个容器进行开发的场景。强烈推荐使用 Compose 搭建所有 Docker，流程参考 <a href="/code/services/NAS.html#nas-docker" target="blank">NAS 上搭建 Docker</a>。</p>
+<h2> Docker 命令</h2>
+<p>Docker 使用查看 <a href="https://yeasy.gitbook.io/docker_practice/introduction/what" target="_blank" rel="noopener noreferrer">Docker — 从入门到实践</a>。</p>
+<ul>
+<li>列出所有容器：<code>sudo docker ps -a</code>。</li>
+<li>停止容器运行：<code>sudo docker stop &lt;CONTAINER ID/NAME&gt;</code>。部分容器名有可能无法识别，最好在容器名称中添加数字。</li>
+<li>删除指定容器：<code>sudo docker rm &lt;CONTAINER ID/NAME&gt;</code>，删除前需先停止容器。</li>
+<li>清理容器（慎重）：<code>sudo docker system prune -a</code>，用于清理磁盘，删除关闭的容器、无用的数据卷和网络，以及无 tag 和没使用的镜像。</li>
+<li>清理数据卷（慎重）：<code>sudo docker volume prune</code>，关闭的容器数据卷会被删除，有可能破坏有用数据，需极度谨慎。</li>
+<li>导出容器中的 mysql 数据库 <code>sudo docker exec &lt;container_id&gt; mysqldump -u root -p&lt;your_mysql_root_password&gt; your_database_name &gt; &lt;output_file&gt;</code>。将 &lt;container_id&gt; 替换为实际的容器 ID，将 &lt;output_file&gt; 替换为你想要保存导出文件的路径和文件名。请将 &lt;your_mysql_root_password&gt; 替换为你的 MySQL root 用户密码。完成后，你将得到一个 MySQL 数据库备份文件。比如导出 Huginn 数据库，<code>sudo docker exec 3de3058e4468 mysqldump -u root -p&lt;your_mysql_root_password&gt; huginn_production &gt; /volume1/docker/huginn/backup.sql</code>。</li>
+</ul>
+<h2> 定制 Docker 镜像</h2>
+<p>官方镜像并不总是符合我们的需求。因此，我们可以使用 docker commit 命令按需定制自己的镜像，具体操作见<a href="https://blog.csdn.net/a772304419/article/details/123199579" target="_blank" rel="noopener noreferrer">使用 docker commit 将修改后的容器保存为镜像及其使用注意事项</a>。</p>
+<p>例如：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>我们也可以使用 Dockerfile 来构建镜像，例如：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 管理 Docker 数据库</h2>
+<p>Docker 中的数据库可以指向外部，并且可以永久保存。但是外部保存的数据是各种小文件，而不是完整的 MySQL 文件，因此不能直接作为数据库进行读取。在实际管理中，我们不需要关心外部存储文件，而应该直接使用正在运行的数据库。</p>
+<p>首先，我们需要将 Docker 的数据库端口对外开放。例如，MySQL 的默认端口是 3306，我们可以将其指向 Docker 外的 3307 端口。然后，我们可以使用数据库应用程序连接数据库地址 192.168.3.3:3307。操作流程类似于 phpMyAdmin，非常简单，可以轻松地查看、修改和导出 Docker 中的数据库。如果你的数据库连接仍然被拒绝，可以参考 Huginn 中的内部数据库连接，将当前外部连接 IP 设置为允许。</p>
+<h2> 其他使用</h2>
+<h3> Windows Docker</h3>
+<p>在 Windows 系统上，可以使用 <a href="https://www.runoob.com/docker/windows-docker-install.html" target="_blank" rel="noopener noreferrer">Docker Desktop</a> 来管理容器，配置方法可参考 <a href="https://newzone.top/posts/2022-09-05-stable_diffusion_ai_painting.html#docker-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE" target="_blank" rel="noopener noreferrer">Windows Docker 环境配置</a>。</p>
+<p>Windows 本地磁盘被挂载到 Linux 的 mnt 目录下，因此，如果需要在 WSL 中访问 Windows 文件，需要在路径前添加 <code>/mnt/</code> 前缀，并将磁盘符号改为小写字母，将反斜杠 <code>\</code> 替换为正斜杠 <code>/</code>。例如，如果 Windows 文件位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」目录下，则其在 Linux 中的路径为「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。Windows 上的 WSL 本地路径为 <code>\\wsl.localhost\</code>。</p>
+<p>请注意：WSL 上的 Linux 环境与其他环境有所不同，须查看<a href="https://learn.microsoft.com/zh-cn/windows/dev-environment/javascript/nodejs-on-wsl" target="_blank" rel="noopener noreferrer">在适用于 Linux 的 Windows 子系统 (WSL2) 上安装 Node.js</a>。</p>
+<h3> 宝塔镜像</h3>
+<p>如果要在 Docker 上部署网站，推荐使用宝塔官方的集成镜像。它基于 CentOS 7.9，解决了 Docker 内部链接问题，还支持将数据库定时备份到本地。有关配置信息，请参考<a href="https://www.bt.cn/bbs/thread-79499-1-1.html" target="_blank" rel="noopener noreferrer">宝塔面板定制 docker 镜像发布 - 集成 LN/AMP 支持</a>和 <a href="http://blog.huangyuqiang.cn/index.php/2022/11/02/docker%E5%AE%89%E8%A3%85%E5%AE%9D%E5%A1%94%E7%8E%AF%E5%A2%83/" target="_blank" rel="noopener noreferrer">Docker 安装宝塔环境</a>。但是，该镜像不适用于 Huginn 的部署，因为 Huginn 不支持 CentOS。我曾尝试将安装命令从 apt-get 替换为 yum，但仍然无法部署。当我尝试在 Docker 中直接安装宝塔而不使用官方集成镜像时，遇到了无法启动数据库的问题。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>在站点设置中，绑定你的本地域名 <a href="http://home.xx.com" target="_blank" rel="noopener noreferrer">home.xx.com</a> 和内部地址 192.168.x.x，这样你就可以通过访问 <a href="http://home.xx.com:1081" target="_blank" rel="noopener noreferrer">home.xx.com:1081</a> 来访问该站点。</p>
+<ul>
+<li>默认地址 <code>http://192.168.x.x:8889/btpanel</code> 上的宝塔面板。</li>
+<li>默认用户：btpanel</li>
+<li>默认密码：btpaneldocker</li>
+<li>镜像默认 SSH 密码：btpaneldocker</li>
+</ul>
+<p>如果宝塔镜像仅用于测试环境，可以使用 <code>rm -f /www/server/panel/data/admin_path.pl</code> 命令来关闭面板入口。如果你关闭了 NAS 的 SSH 功能，宝塔面板也将停止，但不会影响已运行的网站。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -1234,114 +1277,6 @@ Java SPI就是提供这样的一个机制：为某个接口寻找服务实现的
 </table>
 <p><strong>暂时找到这些，后续不断补充。。</strong></p>
 ]]></content:encoded>
-    </item>
-    <item>
-      <title>MAT(Java堆分析工具)使用方式</title>
-      <link>https://newzone.top/posts/MAT.html</link>
-      <guid>https://newzone.top/posts/MAT.html</guid>
-      <source url="https://newzone.top/rss.xml">MAT(Java堆分析工具)使用方式</source>
-      <description>MAT(Java堆分析工具)使用方式 最近在整理笔记，发现之前在分析JAVA内存问题时写的Mat工具文档还是蛮清晰的，现重新整理一下，分享出来。 MAT是个啥 MAT 全称 Eclipse Memory Analysis Tools 是一个分析 Java堆数据的专业工具，可以计算出内存中对象的实例数量、占用空间大小、引用关系等，看看是谁阻止了垃圾收集器的回收工作，从而定位内存泄漏的原因。 什么时候会用到 OutOfMemoryError的时候，触发full gc，但空间却回收不了，引发内存泄露 java服务器系统异常，比如load飙高，io异常，或者线程死锁等，都可能通过分析堆中的内存对象来定位原因</description>
-      <category>coding</category>
-      <pubDate>Wed, 29 Mar 2023 15:11:29 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> MAT(Java堆分析工具)使用方式</h1>
-<p>最近在整理笔记，发现之前在分析JAVA内存问题时写的Mat工具文档还是蛮清晰的，现重新整理一下，分享出来。</p>
-<h2> MAT是个啥</h2>
-<p>MAT 全称 <code>Eclipse Memory Analysis Tools</code> 是一个分析 Java堆数据的专业工具，可以计算出内存中对象的实例数量、占用空间大小、引用关系等，看看是谁阻止了垃圾收集器的回收工作，从而定位内存泄漏的原因。</p>
-<h2> 什么时候会用到</h2>
-<ul>
-<li>OutOfMemoryError的时候，触发full gc，但空间却回收不了，引发内存泄露</li>
-<li>java服务器系统异常，比如load飙高，io异常，或者线程死锁等，都可能通过分析堆中的内存对象来定位原因</li>
-</ul>
-<h2> 怎么安装</h2>
-<p><a href="https://www.eclipse.org/mat/downloads.php" target="_blank" rel="noopener noreferrer">MAT最新下载版本</a></p>
-<p><a href="https://www.eclipse.org/mat/previousReleases.php" target="_blank" rel="noopener noreferrer">MAT历史版本</a></p>
-<p>比较重要的是MAT的版本是和JAVA版本有关的，如果下载的话，需要考虑是否支持本地的 JAVA 版本 。</p>
-<p>我用的是MAC  Intel 版本，所以下载的是 <code>MemoryAnalyzer-1.12.0.20210602-macosx.cocoa.x86_64</code> 。当前最新的 <code>Memory Analyzer 1.14.0 Release</code> 需要Java 17+。</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329152800939.png" alt="image-20230329152800939" tabindex="0" loading="lazy"><figcaption>image-20230329152800939</figcaption></figure>
-<h2> 如何使用</h2>
-<p>首先，MAT是用来分析JAVA堆数据的专业工具，那如何才能获取到JAVA堆数据呢。</p>
-<h3> 分析文件生成方式</h3>
-<ol>
-<li>自动生成，jvm启动参数里添加下面配置，当发生OutOfMemoryError时，虚拟机会自动dump内存快照</li>
-</ol>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ol start="2">
-<li>手动生成，通过执行jdk自带命令</li>
-</ol>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ol start="3">
-<li>Arthas heapdump命令</li>
-</ol>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>接下就可以用 MAT打开转换后的.hprof文件</p>
-<p><strong><span style="color:red">（！我这里只是介绍使用方式，并不是arthas有问题，这个dump文件只是随手生成的一份）</span></strong></p>
-<h3> 使用MAT</h3>
-<p>打开后的首页，里面是一些堆的基本概要信息，比如空间大小、类的数量、对象实例数量、类加载器等等</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329153514976.png" alt="image-20230329153514976" tabindex="0" loading="lazy"><figcaption>image-20230329153514976</figcaption></figure>
-<h2> MAT功能</h2>
-<p>MAT的核心功能有三类：</p>
-<ul>
-<li>Actions：
-<ul>
-<li><strong>Histogram 列出每个类所对应的对象个数，以及所占用的内存大小；</strong></li>
-<li><strong>Dominator Tree 以占用总内存的百分比的方式来列举出所有的实例对象，注意这个地方是直接列举出的对应的对象而不是类，这个视图是用来发现大内存对象的</strong></li>
-<li>Top Consumers：按照类和包分组的方式展示出占用内存最大的一个对象</li>
-<li>Duplicate Classes：检测由多个类加载器所加载的类信息（用来查找重复的类）</li>
-</ul>
-</li>
-<li>Reports：
-<ul>
-<li><strong>Leak Suspects：通过MAT自动分析当前内存泄露的主要原因</strong></li>
-<li>Top Components：Top组件，列出大于总堆1%的组件的报告</li>
-</ul>
-</li>
-<li>Step By Step：
-<ul>
-<li>Component Report：组件报告,分析属于公共根包或类加载器的对象；</li>
-</ul>
-</li>
-</ul>
-<p>下面列举一些会用到的功能。</p>
-<h3> Histogram</h3>
-<p>列出每个类所对应的对象个数，以及所占用的内存大小。</p>
-<p>选中一个ClassName单击后，通过左上角Inspector可以看到当前类的回收情况，内存地址，等</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329154124926.png" alt="image-20230329154124926" tabindex="0" loading="lazy"><figcaption>image-20230329154124926</figcaption></figure>
-<h3> Dominator Tree</h3>
-<p>以占用总内存的百分比的方式来列举出所有的实例对象，注意这个地方是直接列举出的对应的对象而不是类，这个视图是用来发现大内存对象的</p>
-<ul>
-<li>
-<p>通过<code>Dominator Tree</code> 可以轻松看到那些对象占据了大量堆空间，也就可以断定，当前问题出自于哪个对象。</p>
-</li>
-<li>
-<p>再根据该对象的生成方式，去判断出问题的代码在哪里。</p>
-</li>
-</ul>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329154234980.png" alt="image-20230329154234980" tabindex="0" loading="lazy"><figcaption>image-20230329154234980</figcaption></figure>
-<p>由上图可看到<code>com.taobao.arthas.core.server.ArthasBootstrap @ 0x7ba601258</code>占用了32.97%的内存</p>
-<p><strong>那么当我们需要查看，当前该ArthasBootstrap @ 0x7ba601258对象都引用了那些数据，以及当前该对象是被那几个对象所引用的，如何查看？</strong></p>
-<p>在当前所要查看的对象右键，点击List Objects可以看到分别提供了：<code>with outgoing references（查看当前该对象的所有的引用信息）</code> 和 <code>with incoming references（查看当前该对象是被那几个对象所引用的）</code> ；</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329154846899.png" alt="image-20230329154846899" tabindex="0" loading="lazy"><figcaption>image-20230329154846899</figcaption></figure>
-<p>快速找出某个实例没被释放的原因，可以右健 Path to GC Roots–&gt;exclude all phantom/weak/soft etc. references</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329155941552.png" alt="image-20230329155941552" tabindex="0" loading="lazy"><figcaption>image-20230329155941552</figcaption></figure>
-<h3> Leak Suspects</h3>
-<p>通过MAT自动分析当前内存问题的主要原因</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329154945313.png" alt="image-20230329154945313" tabindex="0" loading="lazy"><figcaption>image-20230329154945313</figcaption></figure>
-<p>可以看到，当前给出的主要原因是：<code>**com.taobao.arthas.core.server.ArthasBootstrap**</code> 实例占据<strong>8,392,160 (32.97%)</strong> bytes ， 是由<code> **com.taobao.arthas.agent.ArthasClassloader @ 0x7ba556870**</code>加载的。</p>
-<p>还给出了关键字：</p>
-<p><strong>Keywords</strong></p>
-<ul>
-<li>com.taobao.arthas.core.server.ArthasBootstrap</li>
-<li>com.taobao.arthas.agent.ArthasClassloader @ 0x7ba556870</li>
-<li>com.taobao.arthas.core.shell.term.impl.http.api.HttpApiHandler</li>
-</ul>
-<p>点击detail的话，会有更详细的内容</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329155356140.png" alt="image-20230329155356140" tabindex="0" loading="lazy"><figcaption>image-20230329155356140</figcaption></figure>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329155424428.png" alt="image-20230329155424428" tabindex="0" loading="lazy"><figcaption>image-20230329155424428</figcaption></figure>
-<h3> Thread_Overview</h3>
-<p>用来查看当前进程dump时的所有线程的堆栈信息，通过分析下面所对应的堆栈信息，可以很快速的定位到对应的线程所执行的方法等层级关系，以此来定位对应的异常问题；</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329155550728.png" alt="image-20230329155550728" tabindex="0" loading="lazy"><figcaption>image-20230329155550728</figcaption></figure>
-<h3> Heap Dump Overview</h3>
-<p>查看全局的内存占用信息</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329155637605.png" alt="image-20230329155637605" tabindex="0" loading="lazy"><figcaption>image-20230329155637605</figcaption></figure>
-]]></content:encoded>
-      <enclosure url="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329152800939.png" type="image/png"/>
     </item>
   </channel>
 </rss>
