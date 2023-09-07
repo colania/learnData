@@ -1,5 +1,5 @@
 ---
-article: false
+article: true
 title: Markdown
 icon: markdown
 order: 5
