@@ -1,7 +1,0 @@
----
-article: false
-title: 代码
-icon: regexp
-dir:
-  order: 1
----
