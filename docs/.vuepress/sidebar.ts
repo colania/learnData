@@ -57,9 +57,9 @@ export default sidebar([
     children: [
       {
         text: "工作英语",
-        prefix: "work",
         collapsible: true,
-        children: ["meetingEnglish.md"],
+        prefix: "work",
+        children:["meetingEnglish.md"],
       },
     ],
   },
