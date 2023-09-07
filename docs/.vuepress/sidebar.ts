@@ -8,7 +8,7 @@ export default sidebar([
   { text: "读书笔记",  link: "https://colania.github.io/reading/" },
   {
     text: "随心记",
-    prefix: "/post/daily",
+    prefix: "/posts/daily",
     link: "",
     collapsible: true,
     children:"structure",
