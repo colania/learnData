@@ -57,10 +57,17 @@ export default sidebar([
     children: [
       {
         text: "工作英语",
+        link: "",
         collapsible: true,
         prefix: "work",
         children:["meetingEnglish.md"],
-      },
+      },{
+        text: "生活英语",
+        link: "",
+        collapsible: true,
+        prefix: "life",
+        children:[],
+      }
     ],
   },
   {
