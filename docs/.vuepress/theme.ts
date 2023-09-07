@@ -92,7 +92,7 @@ export default hopeTheme({
 
     // 评论配置（仅做样例，记得更换）
     comment: {
-      // provider: "Waline",
+      // provider: "Giscus",
       // serverURL: "https://waline.newzone.top",
       // reaction: [
       //   "https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f44d.png",
@@ -122,15 +122,14 @@ export default hopeTheme({
       //     level5: "化神",
       //   },
       // },
-
       // Giscus 备用配置
-      /*
+      
       provider: "Giscus",
-      repo: "rockbenben/LearnData",
-      repoId: "R_kgDOHdfk6Q",
-      category: "Comments",
-      categoryId: "DIC_kwDOHdfk6c4CQYNn",
-      */
+      repo: "colania/comment",
+      repoId: "R_kgDOKQgvQg",
+      category: "General",
+      categoryId: "DIC_kwDOKQgvQs4CZJLs",
+      
     },
 
     // 组件库
@@ -139,6 +138,7 @@ export default hopeTheme({
     },
 
     // 禁用不需要的配置
+    //配置链接：https://theme-hope.vuejs.press/zh/guide/markdown/echarts.html#%E9%85%8D%E7%BD%AE 
     mdEnhance: {
       align: true,
       attrs: true, // 使用特殊标记为 Markdown 元素添加属性
