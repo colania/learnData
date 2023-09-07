@@ -1,7 +1,6 @@
 ---
-article: false
+article: true
 title: Docker
-icon: any
 order: 4
 ---
 
