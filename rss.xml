@@ -6,14 +6,80 @@
     <link>https://newzone.top/</link>
     <description>探索、经历、思考、归纳、自我提升，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 19 Sep 2023 11:24:00 GMT</pubDate>
-    <lastBuildDate>Tue, 19 Sep 2023 11:24:00 GMT</lastBuildDate>
+    <pubDate>Wed, 20 Sep 2023 08:14:39 GMT</pubDate>
+    <lastBuildDate>Wed, 20 Sep 2023 08:14:39 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工作英语</category>
     <category>行业追踪</category>
     <category>coding</category>
     <category>java</category>
+    <item>
+      <title>系统稳定方法论</title>
+      <link>https://newzone.top/code/work/onlineProblem.html</link>
+      <guid>https://newzone.top/code/work/onlineProblem.html</guid>
+      <source url="https://newzone.top/rss.xml">系统稳定方法论</source>
+      <description>系统稳定方法论 前两天在做一次面试的时候，遇到一个问题：当你的XX服务出现线上问题，要怎么处理。当时回答的时候，没有做好梳理，回答的比较杂乱。最近就一直在想这个事情，对自己曾经处理过的一些线上事故进行了梳理，打算输出本系列文章。 1. 流程图 流程图 2. 核心关键 2.1 事前 事前就需要有&amp;quot;我在做这个系统的时候，就需要考虑到各方面的问题&amp;quot;的想法,比如说和三方交互，三方出问题怎么办；以及上游突然流量很大，我们该如何做好承压；还有更重要的一点事，我们首要保证核心主链路的正常运转，尽量不要因为代码的问题出现异常情况。（不要小看这个问题，大家有多少线上异常是因为代码bug导致的）。</description>
+      <pubDate>Wed, 20 Sep 2023 08:13:21 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 系统稳定方法论</h1>
+<p>前两天在做一次面试的时候，遇到一个问题：当你的XX服务出现线上问题，要怎么处理。当时回答的时候，没有做好梳理，回答的比较杂乱。最近就一直在想这个事情，对自己曾经处理过的一些线上事故进行了梳理，打算输出本系列文章。</p>
+<h2> 1. 流程图</h2>
+<figure><figcaption>流程图</figcaption></figure>
+<h2> 2. 核心关键</h2>
+<h3> 2.1 事前</h3>
+<p>事前就需要有"我在做这个系统的时候，就需要考虑到各方面的问题"的想法,比如说和三方交互，三方出问题怎么办；以及上游突然流量很大，我们该如何做好承压；还有更重要的一点事，我们首要保证核心主链路的正常运转，尽量不要因为代码的问题出现异常情况。（不要小看这个问题，大家有多少线上异常是因为代码bug导致的）。</p>
+<h4> 2.1.1 测试驱动开发（TDD）</h4>
+<p>测试驱动开发要求在编写某个功能的代码之前先编写测试代码，然后只编写使测试通过的功能代码，通过测试来推动整个开发的进行。</p>
+<p>我在过的一些互联网公司，都是做好单元测试就可以。在这种开发方式中，代码和单测用例都是开发写的，单测用例能不能通过、怎么写可以通过都是开发心知肚明的，而且在赶进度的情况下，很多单测只是测一下主流程，对于异常分支和情况都不会测试。</p>
+<p>后来在跟thoughtworks的朋友聊天的时候，他们是TDD的方式进行。先将各种异常和正常输入的测试用例写好，在写自己功能代码的时候就会会将这些异常情况考虑周全。我个人觉得是比较好的一种开发模式，但是对于节奏快、业务快速调整的国内互联网公司来说，可行性不太大。</p>
+<h4> 2.1.2 服务监控</h4>
+<p>快速感知故障，最重要的就是系统的监控建设完善和配套的的监控系统。</p>
+<p>首先要解决有无的问题，从机器、到操作系统（CPU、内存、磁盘、IO）、到各种中间件（DB、MQ、Redis）、再到应用层（JVM、接口性能、流量、业务指标）等，是否有配套的监控手段。</p>
+<p>监控指标一般会有如下这些，还有一些机器性能指标。机器(容器)内存、CPU、IO等指标：<br>
+</p>
+<h4> 2.1.3 评估系统性能指标</h4>
+<blockquote>
+<p><strong>高性能和业务是强相关的</strong></p>
+</blockquote>
+<ol>
+<li>TP99、吞吐量、延迟</li>
+<li>不仅仅要了解后端的性能指标，更要对全链路性能指标有所了解</li>
+<li>在实际生产环境，还会涉及 CDN 加速、ISP 路由策略、边缘计算等一系列网络工程层面的性能优化指标，你要在大脑里先建立起整个请求的链路蓝图，熟悉每个环节的性能损耗</li>
+</ol>
+<p>在实际的业务场景中，你要关注很多业务相关性指标，比如游戏需要关注<br>
+稳定性；视频需要关注延时；电商需要关注一致性</p>
+<h5> 全链路视角分析系统性能指标</h5>
+<figure><figcaption>Alt text</figcaption></figure>
+<h4> 2.1.4 服务治理</h4>
+<p>服务治理就是老生常谈的那些微服务、网关、部署架构。</p>
+<h3> 2.3 事中</h3>
+<blockquote>
+<p>针对处理流程中的 3 个关键环节：发现故障、恢复故障、故障分析。</p>
+</blockquote>
+<p>在这一阶段，非常依赖个人经验、甚至是对底层原理的掌握深度，还有一些分析工具的使用熟练度。</p>
+<h4> 2.3.1 发现故障</h4>
+<p>快速发现故障，取决于两个方面：</p>
+<ol>
+<li>对系统是否足够了解？<br>
+a. 对系统架构的了解：出现问题后，你需要知道关联的上下游系统都有哪些？依赖的存储、中间件都有哪些？这样你才会形成很清晰的链路，然后去定位问题出现在哪个环节上？<br>
+b. 对业务的了解：只有对业务足够了解，你才能从业务逻辑上判断它到底是不是故障？这个故障具体是哪个业务环节出问题了？然后再回到系统、服务或者代码层面去做进一步定位。</li>
+<li>系统的监控建设是否足够完善<br>
+a. 是否有配套的监控系统：首先要解决有无的问题，从机器、到操作系统（CPU、内存、磁盘、IO）、到各种中间件（DB、MQ、Redis）、再到应用层（JVM、接口性能、流量、业务指标）等，是否有配套的监控手段<br>
+b. 对监控系统的使用是否到位了：有工具了，然后再考虑业务上如何使用好这些工具？要建立哪些监控指标？告警阈值如何进行合理设置？技术同学对于监控系统的使用是否熟练？团队是否有成熟的线上问题处理机制？</li>
+</ol>
+<h4> 2.3.2 快速恢复</h4>
+<p>出现故障后的原则一定是：<strong>第一时间恢复，以尽可能地减少对业务的影响。</strong> 。</p>
+<p>快速恢复的常见手段有：回滚到上一个版本、紧急修复、服务扩容、服务降级、摘机、重启等。如果涉及到数据库操作，最好是打开binlog日志，便于恢复数据。（或者需要人工找出调整的字段，进行纠错）。还有一些一旦发出去就无法收回的东西，比如说短信，还需要和波及的用户及时沟通。</p>
+<p>在恢复故障的同时，还有一件很重要的事情不能遗漏，那就是：<strong>保留现场</strong>，方便后续进行根因分析。</p>
+<h2> 2.4 事后</h2>
+<ol>
+<li>分析问题出现的原因，提交事故报告。</li>
+</ol>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>基于事故报告进行分析，流程改进、监控改进。看实际情况，判断是否需要写一篇事故分析流程，对问题总结后，后续才会更加小心。同时需要提出合理的改进流程。并持续跟进改进流程的具体实施情况。</li>
+</ol>
+]]></content:encoded>
+    </item>
     <item>
       <title>9.9-9.15 周记</title>
       <link>https://newzone.top/daily/2023-09-11.html</link>
@@ -422,110 +488,6 @@ Java SPI就是提供这样的一个机制：为某个接口寻找服务实现的
 <p>使用Java SPI机制的优势是实现解耦，使得第三方服务模块的装配控制的逻辑与调用者的业务代码分离，而不是耦合在一起。应用程序可以根据实际业务情况启用框架扩展或替换框架组件。</p>
 ]]></content:encoded>
       <enclosure url="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230331142758791.png" type="image/png"/>
-    </item>
-    <item>
-      <title>Dubbo时间轮</title>
-      <link>https://newzone.top/posts/Dubbo-time-wheel.html</link>
-      <guid>https://newzone.top/posts/Dubbo-time-wheel.html</guid>
-      <source url="https://newzone.top/rss.xml">Dubbo时间轮</source>
-      <description>Dubbo时间轮 时间轮是一种高效的、批量管理定时任务的调度模型。时间轮一般会实现成一个环形结构，类似一个时钟，分为很多槽，一个槽代表一个时间间隔，每个槽使用双向链表存储定时任务；指针周期性地跳动，跳动到一个槽位，就执行该槽位的定时任务。 1.png</description>
-      <category>java</category>
-      <pubDate>Sun, 02 Apr 2023 21:58:16 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> Dubbo时间轮</h1>
-<p><strong>时间轮是一种高效的、批量管理定时任务的调度模型</strong>。时间轮一般会实现成一个环形结构，类似一个时钟，分为很多槽，一个槽代表一个时间间隔，每个槽使用双向链表存储定时任务；指针周期性地跳动，跳动到一个槽位，就执行该槽位的定时任务。</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/CgqCHl8yQfKAEM41AAB8fTu5PCY623.png" alt="1.png" tabindex="0" loading="lazy"><figcaption>1.png</figcaption></figure>
-<p>需要注意的是，单层时间轮的容量和精度都是有限的，对于精度要求特别高、时间跨度特别大或是海量定时任务需要调度的场景，通常会使用<strong>多级时间轮</strong>以及<strong>持久化存储与时间轮结合</strong>的方案。</p>
-<p>那在 Dubbo 中，时间轮的具体实现方式是怎样的呢？Dubbo 的时间轮实现位于 dubbo-common 模块的 <code>org.apache.dubbo.common.timer </code>包中，下面我们就来分析时间轮涉及的核心接口和实现。</p>
-<h2> 核心接口</h2>
-<h3> TimerTask接口</h3>
-<p>在 Dubbo 中，所有的定时任务都要继承 <strong>TimerTask 接口</strong>。TimerTask 接口非常简单，只定义了一个 run() 方法，该方法的入参是一个 Timeout 接口的对象。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> Timeout接口</h3>
-<p>Timeout 对象与 TimerTask 对象一一对应，两者的关系类似于线程池返回的 Future 对象与提交到线程池中的任务对象之间的关系。通过 Timeout 对象，我们不仅可以查看定时任务的状态，还可以操作定时任务（例如取消关联的定时任务）。</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230402222206190.png" alt="image-20230402222206190" tabindex="0" loading="lazy"><figcaption>image-20230402222206190</figcaption></figure>
-<h3> Timer接口</h3>
-<p>Timer 接口定义了定时器的基本行为，如下图所示，其核心是 newTimeout() 方法：提交一个定时任务（TimerTask）并返回关联的 Timeout 对象，这有点类似于向线程池提交任务的感觉。</p>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230402222333395.png" alt="image-20230402222333395" tabindex="0" loading="lazy"><figcaption>image-20230402222333395</figcaption></figure>
-<figure><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230402223154974.png" alt="image-20230402223154974" tabindex="0" loading="lazy"><figcaption>image-20230402223154974</figcaption></figure>
-<h2> 接口实现</h2>
-<h3> HashedWheelTimeout</h3>
-<p>HashedWheelTimeout 是 Timeout 接口的唯一实现，是 HashedWheelTimer 的内部类。HashedWheelTimeout 扮演了两个角色：</p>
-<ul>
-<li>第一个，时间轮中双向链表的<strong>节点</strong>，即定时任务 TimerTask 在 HashedWheelTimer 中的容器。</li>
-<li>第二个，定时任务 TimerTask 提交到 HashedWheelTimer 之后返回的<strong>句柄</strong>（Handle），用于在时间轮外部查看和控制定时任务。</li>
-</ul>
-<h4> HashedWheelTimeout 中的核心字段如下：</h4>
-<blockquote>
-<ul>
-<li><strong>prev、next（HashedWheelTimeout类型）</strong>，分别对应当前定时任务在链表中的前驱节点和后继节点。</li>
-<li><strong>task（TimerTask类型）</strong>，指实际被调度的任务。</li>
-<li><strong>deadline（long类型）</strong>，指定时任务执行的时间。这个时间是在创建 HashedWheelTimeout 时指定的，计算公式是：currentTime（创建 HashedWheelTimeout 的时间） + delay（任务延迟时间） - startTime（HashedWheelTimer 的启动时间），时间单位为纳秒。</li>
-<li><strong>state（volatile int类型）</strong>，指定时任务当前所处状态，可选的有三个，分别是 INIT（0）、CANCELLED（1）和 EXPIRED（2）。另外，还有一个 STATE_UPDATER 字段（AtomicIntegerFieldUpdater类型）实现 state 状态变更的原子性。</li>
-<li><strong>remainingRounds（long类型）</strong>，指当前任务剩余的时钟周期数。时间轮所能表示的时间长度是有限的，在任务到期时间与当前时刻的时间差，超过时间轮单圈能表示的时长，就出现了套圈的情况，需要该字段值表示剩余的时钟周期。</li>
-</ul>
-</blockquote>
-<h4> HashedWheelTimeout 中的核心方法有：</h4>
-<blockquote>
-<ul>
-<li><strong>isCancelled()、isExpired() 、state() 方法，</strong> 主要用于检查当前 HashedWheelTimeout 状态。</li>
-<li><strong>cancel() 方法，</strong> 将当前 HashedWheelTimeout 的状态设置为 CANCELLED，并将当前 HashedWheelTimeout 添加到 cancelledTimeouts 队列中等待销毁。</li>
-<li><strong>expire() 方法，</strong> 当任务到期时，会调用该方法将当前 HashedWheelTimeout 设置为 EXPIRED 状态，然后调用其中的 TimerTask 的 run() 方法执行定时任务。</li>
-<li><strong>remove() 方法，</strong> 将当前 HashedWheelTimeout 从时间轮中删除。</li>
-</ul>
-</blockquote>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> HashedWheelBucket</h3>
-<p>HashedWheelBucket 是时间轮中的一个槽，时间轮中的槽实际上就是一个用于缓存和管理双向链表的容器，双向链表中的每一个节点就是一个 HashedWheelTimeout 对象，也就关联了一个 TimerTask 定时任务。</p>
-<p>HashedWheelBucket 持有双向链表的首尾两个节点，分别是 head 和 tail 两个字段，再加上每个 HashedWheelTimeout 节点均持有前驱和后继的引用，这样就可以正向或是逆向遍历整个双向链表了。</p>
-<blockquote>
-<ul>
-<li><strong>addTimeout() 方法</strong>：新增 HashedWheelTimeout 到双向链表的尾部。</li>
-<li><strong>pollTimeout() 方法</strong>：移除双向链表中的头结点，并将其返回。</li>
-<li><strong>remove() 方法</strong>：从双向链表中移除指定的 HashedWheelTimeout 节点。</li>
-<li><strong>clearTimeouts() 方法</strong>：循环调用 pollTimeout() 方法处理整个双向链表，并返回所有未超时或者未被取消的任务。</li>
-<li><strong>expireTimeouts() 方法</strong>：遍历双向链表中的全部 HashedWheelTimeout 节点。 在处理到期的定时任务时，会通过 remove() 方法取出，并调用其 expire() 方法执行；对于已取消的任务，通过 remove() 方法取出后直接丢弃；对于未到期的任务，会将 remainingRounds 字段（剩余时钟周期数）减一。</li>
-</ul>
-</blockquote>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> HashedWheelTimer</h3>
-<p>HashedWheelTimer 是 Timer 接口的实现，它通过时间轮算法实现了一个定时器。</p>
-<p>HashedWheelTimer 会根据当前时间轮指针选定对应的槽（HashedWheelBucket），从双向链表的头部开始迭代，对每个定时任务（HashedWheelTimeout）进行计算，属于当前时钟周期则取出运行，不属于则将其剩余的时钟周期数减一操作。</p>
-<blockquote>
-<ul>
-<li><strong>workerState（volatile int类型）</strong>：时间轮当前所处状态，可选值有 init、started、shutdown。同时，有相应的 AtomicIntegerFieldUpdater 实现 workerState 的原子修改。</li>
-<li><strong>startTime（long类型）</strong>：当前时间轮的启动时间，提交到该时间轮的定时任务的 deadline 字段值均以该时间戳为起点进行计算。</li>
-<li><strong>wheel（HashedWheelBucket[]类型）</strong>：该数组就是时间轮的环形队列，每一个元素都是一个槽。当指定时间轮槽数为 n 时，实际上会取大于且最靠近 n 的 2 的幂次方值。</li>
-<li><strong>timeouts、cancelledTimeouts（LinkedBlockingQueue类型）</strong>：timeouts 队列用于缓冲外部提交时间轮中的定时任务，cancelledTimeouts 队列用于暂存取消的定时任务。HashedWheelTimer 会在处理 HashedWheelBucket 的双向链表之前，先处理这两个队列中的数据。</li>
-<li><strong>tick（long类型）</strong>：该字段在 HashedWheelTimer$Worker 中，是时间轮的指针，是一个步长为 1 的单调递增计数器。</li>
-<li><strong>mask（int类型）</strong>：掩码， mask = wheel.length - 1，执行 ticks &amp; mask 便能定位到对应的时钟槽。</li>
-<li><strong>ticksDuration（long类型）</strong>：时间指针每次加 1 所代表的实际时间，单位为纳秒。</li>
-<li><strong>pendingTimeouts（AtomicLong类型）</strong>：当前时间轮剩余的定时任务总数。</li>
-<li><strong>workerThread（Thread类型）</strong>：时间轮内部真正执行定时任务的线程。</li>
-<li><strong>worker（Worker类型）</strong>：真正执行定时任务的逻辑封装这个 Runnable 对象中。</li>
-</ul>
-</blockquote>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>时间轮对外提供了一个 newTimeout() 接口用于提交定时任务，在定时任务进入到 timeouts 队列之前会先调用 start() 方法启动时间轮，其中会完成下面两个关键步骤：</p>
-<ol>
-<li>确定时间轮的 startTime 字段；</li>
-<li>启动 workerThread 线程，开始执行 worker 任务。</li>
-<li>之后根据 startTime 计算该定时任务的 deadline 字段，最后才能将定时任务封装成 HashedWheelTimeout 并添加到 timeouts 队列。</li>
-</ol>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>下面我们来分析时间轮指针一次转动的全流程。</p>
-<ol>
-<li>时间轮指针转动，时间轮周期开始。</li>
-<li>清理用户主动取消的定时任务，这些定时任务在用户取消时，会记录到 cancelledTimeouts 队列中。在每次指针转动的时候，时间轮都会清理该队列。</li>
-<li>将缓存在 timeouts 队列中的定时任务转移到时间轮中对应的槽中。</li>
-<li>根据当前指针定位对应槽，处理该槽位的双向链表中的定时任务。</li>
-<li>检测时间轮的状态。如果时间轮处于运行状态，则循环执行上述步骤，不断执行定时任务。如果时间轮处于停止状态，则执行下面的步骤获取到未被执行的定时任务并加入 unprocessedTimeouts 队列：遍历时间轮中每个槽位，并调用 clearTimeouts() 方法；对 timeouts 队列中未被加入槽中循环调用 poll()。</li>
-<li>最后再次清理 cancelledTimeouts 队列中用户主动取消的定时任务。</li>
-</ol>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Dubbo 中如何使用定时任务</h2>
-<p>在 Dubbo 中，时间轮并不直接用于周期性操作，而是只向时间轮提交执行单次的定时任务，在上一次任务执行完成的时候，调用 newTimeout() 方法再次提交当前任务，这样就会在下个周期执行该任务。即使在任务执行过程中出现了 GC、I/O 阻塞等情况，导致任务延迟或卡住，也不会有同样的任务源源不断地提交进来，导致任务堆积。</p>
-<p>Dubbo 中对时间轮的应用主要体现在如下两个方面：</p>
-<ul>
-<li><strong>失败重试，</strong> 例如，Provider 向注册中心进行注册失败时的重试操作，或是 Consumer 向注册中心订阅时的失败重试等。</li>
-<li><strong>周期性定时任务，</strong> 例如，定期发送心跳请求，请求超时的处理，或是网络连接断开后的重连机制。</li>
-</ul>
-<h4> 举例： 注册失败，失败重试</h4>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-      <enclosure url="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/CgqCHl8yQfKAEM41AAB8fTu5PCY623.png" type="image/png"/>
     </item>
   </channel>
 </rss>
