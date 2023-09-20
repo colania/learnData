@@ -34,7 +34,29 @@ export default sidebar([
         link: "",
         collapsible: true,
         prefix: "work",
-        children: ["onlineProblem.md"],
+        children: [
+          "onlineProblem.md",
+          {
+            text: "事前",
+            link: "",
+            collapsible: true,
+            prefix: "before",
+            children: [],
+          },
+          {
+            text: "事中",
+            link: "",
+            collapsible: true,
+            prefix: "during",
+            children: [],
+          },
+          {
+            text: "事后",
+            link: "after",
+            collapsible: true,
+            children: [],
+          }
+      ],
       }
     ],
   },
