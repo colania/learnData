@@ -29,7 +29,7 @@ export default sidebar([
         collapsible: true,
         prefix: "services",
         children: ["Docker.md"],
-      },{
+      }, {
         text: "工作感悟",
         link: "",
         collapsible: true,
@@ -56,7 +56,7 @@ export default sidebar([
             collapsible: true,
             children: [],
           }
-      ],
+        ],
       }
     ],
   },
