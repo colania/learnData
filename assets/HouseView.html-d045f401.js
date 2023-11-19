@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper-c27b6911.js";import{o,c as t,a as s}from"./app-b92eb86e.js";const c={},_=s("p",null,"梦想很饱满，实现很骨感。",-1),n=[_];function r(a,l){return o(),t("div",null,n)}const m=e(c,[["render",r],["__file","HouseView.html.vue"]]);export{m as default};
