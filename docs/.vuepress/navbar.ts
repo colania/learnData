@@ -5,6 +5,7 @@ export default navbar([
   { text: "博客", link: "/blog" },
   { text: "目录", link: "/" },
   { text: "随心记", link: "/daily/summary" },
+  { text: "灵光乍现", link: "/inspiration" },
   {
     text: "Contact",
     children: [
